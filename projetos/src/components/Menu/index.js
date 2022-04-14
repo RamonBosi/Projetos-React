@@ -12,7 +12,7 @@ export default function MenuPrincipal(){
             </Endereco>
             <Pesquisar>
                 <div></div>
-                <input type = 'text'/>
+                <input type = 'text' placeholder = 'Pesquisar produtos'/>
                 <div></div>
             </Pesquisar>
             <InformacaoDaConta>

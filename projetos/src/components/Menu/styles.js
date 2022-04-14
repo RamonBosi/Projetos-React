@@ -1,13 +1,12 @@
 import styled from 'styled-components'
 
-const edgeThickness = 2
-
 export const Menu = styled.header`
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: #533E85;
-    height: 85px;
+    height: 100px;
+    padding: 15px;
 `
 
 export const Logo = styled.div`
@@ -21,26 +20,27 @@ export const Endereco = styled.a`
     flex-direction: column;
     padding: 8px;
     border-radius: 10px;
-    border: ${edgeThickness}px solid rgba(255, 255, 255, 0);
+    border: 2px solid rgba(255, 255, 255, 0);
 
     :hover{
-        border: ${edgeThickness}px solid rgba(255, 255, 255, 100);
+        border: 2px solid rgba(255, 255, 255, 100);
     }
 `
 
 export const Pesquisar = styled.div`
     display:flex;
-    height: 20px;
+    height: 40px;
     
     > input{
+        font-size: 20px;
         width: 400px;
         outline: none;
         border: none;
-        padding: 0 0 0 2px;
+        padding: 0 0 0 3px;
     }
     
     > div{
-        width: 30px;
+        width: 45px;
     }
 
     > div:nth-of-type(1){
@@ -58,16 +58,15 @@ export const InformacaoDaConta = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    list-style-type: none;
 
    > a{
         border-radius: 10px;
         margin: 0 15px;
         padding: 8px;
-        border: ${edgeThickness}px solid rgba(255, 255, 255, 0);
+        border: 2px solid rgba(255, 255, 255, 0);
 
        :hover{
-            border: ${edgeThickness}px solid rgba(255, 255, 255, 100);
+            border: 2px solid rgba(255, 255, 255, 100);
         }
 
        :nth-of-type(3){
