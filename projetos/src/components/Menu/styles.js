@@ -9,13 +9,13 @@ export const Menu = styled.header`
     padding: 15px;
 `
 
-export const Logo = styled.div`
+export const Mark = styled.div`
     > h2{
         color: orange;
     }
 `
 
-export const Endereco = styled.a`
+export const Address = styled.a`
     display: flex;
     flex-direction: column;
     padding: 8px;
@@ -27,7 +27,7 @@ export const Endereco = styled.a`
     }
 `
 
-export const Pesquisar = styled.div`
+export const Search = styled.div`
     display:flex;
     height: 40px;
     
@@ -54,7 +54,7 @@ export const Pesquisar = styled.div`
     }
 `
 
-export const InformacaoDaConta = styled.div`
+export const AccountInformation = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;

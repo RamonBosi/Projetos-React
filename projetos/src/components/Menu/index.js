@@ -1,25 +1,25 @@
-import { Menu, Logo, Pesquisar, Endereco, InformacaoDaConta } from './styles'
+import { Menu, Mark, Search, Address, AccountInformation } from './styles'
 
 export default function MenuPrincipal(){
     return(
         <Menu>
-            <Logo>
+            <Mark>
                 <h2>Loja Virtual</h2>
-            </Logo>
-            <Endereco href = '#'>
+            </Mark>
+            <Address href = '#'>
                 <p>Olá</p>
                 <p>Selecione seu endereço</p>
-            </Endereco>
-            <Pesquisar>
+            </Address>
+            <Search>
                 <div></div>
                 <input type = 'text' placeholder = 'Pesquisar produtos'/>
                 <div></div>
-            </Pesquisar>
-            <InformacaoDaConta>
+            </Search>
+            <AccountInformation>
                 <a href = '#'>Olá, Faça seu login<br/>Contas e Listas</a>
                 <a  href = '#'>Devoluções e <br/>Pedidos</a>
                 <a  href = '#'>Carrinho</a>
-            </InformacaoDaConta>
+            </AccountInformation>
         </Menu>
     )
 }

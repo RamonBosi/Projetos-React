@@ -1,9 +1,9 @@
-import MenuPrincipal from "./components/Menu";
+import MainMenu from "./components/Menu";
 
 export default function App() {
   return (
     <>
-        <MenuPrincipal/>
+        <MainMenu/>
     </>
   );
 }
