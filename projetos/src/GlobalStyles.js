@@ -8,11 +8,6 @@ export const GlobalStyles = createGlobalStyle`
         box-sizing: border-box
     }
 
-    a{
-        color: #ffff;
-        text-decoration: none;
-    }
-
     body{
         background-color: #3b3b3b;
     }
