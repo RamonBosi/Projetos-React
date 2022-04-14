@@ -5,6 +5,7 @@ export const FilterByValue = styled.aside`
     flex-direction: column;
     background-color: #533E85;
     padding: 10px;
+    height: 90px;
     
     > h2{
         font-size: 18px;
