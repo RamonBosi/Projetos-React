@@ -1,10 +1,10 @@
-import MainMenu from "./components/Menu";
+import Menu from "./components/Menu";
 import TagMain from "./components/TagMain";
 
 export default function App() {
   return (
     <>
-        <MainMenu/>
+        <Menu/>
         <TagMain/>
     </>
   );
