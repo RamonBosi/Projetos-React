@@ -1,4 +1,4 @@
-import { Menu, Logo, Pesquisar, InformacaoDaConta } from './styles'
+import { Menu, Logo, Pesquisar, Endereco, InformacaoDaConta } from './styles'
 
 export default function MenuPrincipal(){
     return(
@@ -6,18 +6,19 @@ export default function MenuPrincipal(){
             <Logo>
                 <h2>Loja Virtual</h2>
             </Logo>
-            <div>
-                <a href = '#'>Olá<br/>Selecione seu endereço</a>
-            </div>
+            <Endereco href = '#'>
+                <p>Olá</p>
+                <p>Selecione seu endereço</p>
+            </Endereco>
             <Pesquisar>
                 <div></div>
                 <input type = 'text'/>
                 <div></div>
             </Pesquisar>
             <InformacaoDaConta>
-                <li><a href = '#'>Olá, Faça seu login<br/>Contas e Listas</a></li>
-                <li><a  href = '#'>Devoluções e <br/>Pedidos</a></li>
-                <li><a  href = '#'>Carrinho</a></li>
+                <a href = '#'>Olá, Faça seu login<br/>Contas e Listas</a>
+                <a  href = '#'>Devoluções e <br/>Pedidos</a>
+                <a  href = '#'>Carrinho</a>
             </InformacaoDaConta>
         </Menu>
     )
