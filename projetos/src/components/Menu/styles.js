@@ -41,16 +41,16 @@ export const Search = styled.div`
     
     > div{
         width: 45px;
-    }
+    
+        :nth-of-type(1){
+            background-color: black;
+            border-radius: 20px 0 0 20px;
+        }
 
-    > div:nth-of-type(1){
-        background-color: black;
-        border-radius: 20px 0 0 20px;
-    }
-
-    > div:nth-of-type(2){
-        background-color: orange;
-        border-radius: 0 20px 20px 0;
+        :nth-of-type(2){
+            background-color: orange;
+            border-radius: 0 20px 20px 0;
+        }
     }
 `
 
