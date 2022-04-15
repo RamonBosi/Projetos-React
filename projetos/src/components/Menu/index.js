@@ -1,6 +1,6 @@
 import { Menu, Mark, Search, Address, AccountInformation } from './styles'
 
-export default function MenuPrincipal(){
+export default function MainMenu(){
     return(
         <Menu>
             <Mark>
