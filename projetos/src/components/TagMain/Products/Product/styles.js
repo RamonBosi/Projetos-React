@@ -10,6 +10,7 @@ export const Product = styled.div`
     padding: 10px;
     width: 240px;
     height: 370px;
+    cursor: pointer;
 
     > div{
 
