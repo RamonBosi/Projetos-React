@@ -6,6 +6,7 @@ export const Footer = styled.footer`
     margin: 30px 0 0 0;
     display: flex;
     flex-direction: column;
+    border-top: 5px solid black;
 
     > div > h2{
         text-align: center;

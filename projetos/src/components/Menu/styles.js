@@ -7,6 +7,7 @@ export const Menu = styled.header`
     background-color: #533E85;
     height: 100px;
     padding: 15px;
+    border-bottom: 5px solid black;
 `
 
 export const Mark = styled.div`
