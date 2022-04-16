@@ -6,7 +6,8 @@ export const FilterByValue = styled.aside`
     background-color: var(--elements-background-color);
     padding: 10px;
     height: 90px;
-    
+    border-radius: 10px;
+
     > h2{
         font-size: 1.8rem;
         margin: 0 0 10px 0;
@@ -23,6 +24,7 @@ export const FilterByValue = styled.aside`
             padding: 0 0 0 5px;
             height: 25px;
             width: 80px;
+            border-radius: 5px;
 
             ::-webkit-inner-spin-button{ 
                 all: unset; 

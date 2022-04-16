@@ -11,6 +11,7 @@ export const Product = styled.div`
     width: 240px;
     height: 370px;
     cursor: pointer;
+    border-radius: 10px;
 
     > div{
 
