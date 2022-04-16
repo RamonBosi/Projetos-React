@@ -3,13 +3,12 @@ import styled from "styled-components";
 export const FilterByValue = styled.aside`
     display: flex;
     flex-direction: column;
-    background-color: #533E85;
+    background-color: var(--elements-background-color);
     padding: 10px;
     height: 90px;
     
     > h2{
         font-size: 18px;
-        color: #fff;
         margin: 0 0 10px 0;
         text-align: center;
     }
@@ -37,7 +36,7 @@ export const FilterByValue = styled.aside`
             border: none;
             border-radius: 10px;
             cursor: pointer;
-            box-shadow: 2px 2px 2px 0 black;
+            box-shadow: 2px 2px 2px 0 var(--default-black);
 
             :active{
                 box-shadow: none;

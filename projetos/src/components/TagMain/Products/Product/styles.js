@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
 export const Product = styled.div`
-    background-color: #533E85;
-    color: #fff;
+    background-color: var(--elements-background-color);
+    color: var(--default-white);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,7 +20,7 @@ export const Product = styled.div`
             align-items: center;
             width: 220px;
             height: 300px;
-            background-color: #4A4444;
+            background-color: rgba(74, 68, 68);
             margin: 0 0 10px 0;
         }
 

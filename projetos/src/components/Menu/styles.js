@@ -4,15 +4,15 @@ export const Menu = styled.header`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #533E85;
+    background-color: var(--elements-background-color);
     height: 100px;
     padding: 15px;
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid var(--default-black);
 `
 
 export const Mark = styled.div`
     > h2{
-        color: orange;
+        color: var(--brand-color);
     }
 `
 
@@ -44,12 +44,12 @@ export const Search = styled.div`
         width: 45px;
     
         :nth-of-type(1){
-            background-color: black;
+            background-color: var(--default-black);
             border-radius: 20px 0 0 20px;
         }
 
         :nth-of-type(2){
-            background-color: orange;
+            background-color: rgba(255, 199, 0);
             border-radius: 0 20px 20px 0;
         }
     }

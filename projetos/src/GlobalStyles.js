@@ -8,12 +8,21 @@ export const GlobalStyles = createGlobalStyle`
         box-sizing: border-box
     }
 
+    :root{
+        --elements-background-color: rgba(83, 62, 133);
+        --page-background-color: rgba(243, 233, 221);
+        --brand-color: rgba(255, 199, 0);
+
+        --default-white: rgba(255, 255, 255);
+        --default-black: rgba(0, 0, 0);
+    }
+
     a{
-        color: #ffff;
+        color: var(--default-white);
         text-decoration: none;
     }
 
     body{
-        background-color: #F3E9DD;
+        background-color: var(--page-background-color);
     }
 `
