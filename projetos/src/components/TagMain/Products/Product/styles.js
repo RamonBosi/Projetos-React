@@ -28,7 +28,7 @@ export const Product = styled.div`
             align-self: flex-start;
 
             > p{
-                font-size: 20px;
+                font-size: 2rem;
                 margin: 10px 0;
             }
         }

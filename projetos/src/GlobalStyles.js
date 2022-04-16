@@ -7,7 +7,7 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
         box-sizing: border-box
     }
-
+    
     :root{
         --elements-background-color: rgba(83, 62, 133);
         --page-background-color: rgba(243, 233, 221);
@@ -16,13 +16,18 @@ export const GlobalStyles = createGlobalStyle`
         --default-white: rgba(255, 255, 255);
         --default-black: rgba(0, 0, 0);
     }
-
-    a{
-        color: var(--default-white);
-        text-decoration: none;
+    
+    html{
+        font-size: 62.5%;
     }
 
     body{
         background-color: var(--page-background-color);
+        font-size: 1.6rem;
+    }
+
+    a{
+        color: var(--default-white);
+        text-decoration: none;
     }
 `

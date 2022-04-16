@@ -8,7 +8,7 @@ export const FilterByValue = styled.aside`
     height: 90px;
     
     > h2{
-        font-size: 18px;
+        font-size: 1.8rem;
         margin: 0 0 10px 0;
         text-align: center;
     }
@@ -16,7 +16,7 @@ export const FilterByValue = styled.aside`
     > div{
 
         > input{
-            font-size: 15px;
+            font-size: 1.5rem;
             outline: none;
             border: none;
             margin: 0 5px;
@@ -30,6 +30,7 @@ export const FilterByValue = styled.aside`
         }
 
         > button{
+            font-size: 1.4rem;
             padding: 10px 15px;
             margin: 0 0 0 5px;
             background-color: rgba(0, 255, 56);

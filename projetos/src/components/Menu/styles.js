@@ -12,6 +12,7 @@ export const Menu = styled.header`
 
 export const Mark = styled.div`
     > h2{
+        font-size: 2.2rem;
         color: var(--brand-color);
     }
 `
@@ -33,7 +34,7 @@ export const Search = styled.div`
     height: 40px;
     
     > input{
-        font-size: 20px;
+        font-size: 2rem;
         width: 400px;
         outline: none;
         border: none;
