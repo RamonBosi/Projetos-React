@@ -2,6 +2,8 @@ import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyles = createGlobalStyle`
 
+    @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
     *{
         padding:0;
         margin: 0;
@@ -22,6 +24,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body{
+        font-family: Arial, Helvetica, sans-serif;
         background-color: var(--page-background-color);
         font-size: 1.6rem;
     }

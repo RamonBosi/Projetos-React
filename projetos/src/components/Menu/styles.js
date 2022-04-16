@@ -12,6 +12,7 @@ export const Menu = styled.header`
 
 export const Mark = styled.div`
     > h2{
+        font-family: 'Courgette', Arial, Helvetica, sans-serif;
         font-size: 2.2rem;
         color: var(--brand-color);
     }
