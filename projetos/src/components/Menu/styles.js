@@ -51,8 +51,17 @@ export const Search = styled.div`
         }
 
         :nth-of-type(2){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 3.5px 1px 0;
             background-color: rgba(255, 199, 0);
             border-radius: 0 20px 20px 0;
+
+            > span{
+                font-size: 3.6rem;
+                color: var(--default-white);
+            }
         }
     }
 `
@@ -73,7 +82,11 @@ export const AccountInformation = styled.div`
         }
 
        :nth-of-type(3){
-            padding: 15px;
+           padding: 10px;
+
+           > span{
+               font-size: 3rem;
+            }
        }
    }
 `

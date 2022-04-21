@@ -1,5 +1,5 @@
 import { Menu, Mark, Search, Address, AccountInformation } from './styles'
-import IconSearch from '../Icons/Search'
+import Icon from '../Icons'
 
 export default function MainMenu(){
     return(
@@ -14,12 +14,12 @@ export default function MainMenu(){
             <Search>
                 <div></div>
                 <input type = 'text' placeholder = 'Pesquisar produtos'/>
-                <div><IconSearch/></div>
+                <div><Icon>search</Icon></div>
             </Search>
             <AccountInformation>
                 <a href = '#'>Olá, Faça seu login<br/>Contas e Listas</a>
                 <a  href = '#'>Devoluções e <br/>Pedidos</a>
-                <a  href = '#'>Carrinho</a>
+                <a  href = '#'><Icon>shopping_cart</Icon></a>
             </AccountInformation>
         </Menu>
     )
