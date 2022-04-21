@@ -1,13 +1,36 @@
 import styled from 'styled-components'
 
+const gridAreaNames = {
+    Mark: 'Mark',
+    Address: 'Address',
+    Search: 'Search',
+    AccountInformation: 'AccountInformation',
+    gridTemplateArea(){
+        return `
+        ". ${this.Mark} ${this.AccountInformation} ${this.AccountInformation}"
+        "${this.Search} ${this.Search} ${this.Search} ${this.Search}"
+        "${this.Address} ${this.Address} . ."
+        ` 
+    }
+}
+
 export const Menu = styled.header`
+    background-color: var(--elements-background-color);
+    padding: 15px;
+    border-bottom: 5px solid var(--default-black);
+`
+
+export const MenuContent = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--elements-background-color);
-    height: 100px;
-    padding: 15px;
-    border-bottom: 5px solid var(--default-black);
+
+    @media(max-width: 400px){
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: ${gridAreaNames.gridTemplateArea()};
+    }
 `
 
 export const Mark = styled.div`
@@ -15,6 +38,10 @@ export const Mark = styled.div`
         font-family: 'Courgette', Arial, Helvetica, sans-serif;
         font-size: 2.3rem;
         color: var(--brand-color);
+    }
+
+    @media(max-width: 400px){
+        grid-area: ${gridAreaNames.Mark};
     }
 `
 
@@ -27,6 +54,10 @@ export const Address = styled.a`
 
     :hover{
         border: 2px solid rgba(255, 255, 255, 100);
+    }
+
+    @media(max-width: 400px){
+        grid-area: ${gridAreaNames.Address};
     }
 `
 
@@ -64,6 +95,10 @@ export const Search = styled.div`
             }
         }
     }
+
+    @media(max-width: 400px){
+        grid-area: ${gridAreaNames.Search};
+    }
 `
 
 export const AccountInformation = styled.div`
@@ -89,4 +124,12 @@ export const AccountInformation = styled.div`
             }
        }
    }
+
+   @media(max-width: 400px){
+       grid-area: ${gridAreaNames.AccountInformation};
+        
+        > a:nth-of-type(2){
+            display: none;
+        }
+    }
 `
