@@ -4,20 +4,17 @@ const gridAreaNames = {
     Mark: 'Mark',
     Address: 'Address',
     Search: 'Search',
-    AccountInformation: 'AccountInformation',
-    gridTemplateArea(){
-        return `
-        ". ${this.Mark} ${this.AccountInformation} ${this.AccountInformation}"
-        "${this.Search} ${this.Search} ${this.Search} ${this.Search}"
-        "${this.Address} ${this.Address} . ."
-        ` 
-    }
+    AccountInformation: 'AccountInformation'
 }
 
 export const Menu = styled.header`
     background-color: var(--elements-background-color);
     padding: 15px;
     border-bottom: 5px solid var(--default-black);
+
+    @media(max-width: 400px){
+        padding: 8px;
+    }
 `
 
 export const MenuContent = styled.div`
@@ -25,11 +22,34 @@ export const MenuContent = styled.div`
     justify-content: space-around;
     align-items: center;
 
+    > span{
+        cursor: pointer;
+        display: none;
+        color: var(--default-white);
+        font-size: 3.8rem;
+    }
+    
     @media(max-width: 400px){
+        height: 250px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas: ${gridAreaNames.gridTemplateArea()};
+        grid-template-rows: repeat(3, 80px);
+        grid-template-areas: ${() => {
+
+            const {Mark, Address, Search, AccountInformation} = gridAreaNames
+
+            return `
+                ". ${Mark} ${AccountInformation} ${AccountInformation}"
+                "${Search} ${Search} ${Search} ${Search}"
+                "${Address} ${Address} ${Address} ."
+            ` 
+        }};
+        justify-items: center;
+
+        > span{
+            display: block;
+            justify-self: flex-start;
+        }
     }
 `
 
@@ -58,6 +78,7 @@ export const Address = styled.a`
 
     @media(max-width: 400px){
         grid-area: ${gridAreaNames.Address};
+        justify-self: flex-start;
     }
 `
 
@@ -66,8 +87,8 @@ export const Search = styled.div`
     height: 40px;
     
     > input{
+        width: 100%;
         font-size: 2rem;
-        width: 400px;
         outline: none;
         border: none;
         padding: 0 0 0 3px;
@@ -98,6 +119,7 @@ export const Search = styled.div`
 
     @media(max-width: 400px){
         grid-area: ${gridAreaNames.Search};
+        justify-self: center;
     }
 `
 
@@ -128,8 +150,12 @@ export const AccountInformation = styled.div`
    @media(max-width: 400px){
        grid-area: ${gridAreaNames.AccountInformation};
         
-        > a:nth-of-type(2){
-            display: none;
+        > a{
+            margin: 0;
+
+            :nth-of-type(2){
+                display: none;
+            }
         }
     }
 `

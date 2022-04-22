@@ -5,6 +5,7 @@ export default function MainMenu(){
     return(
         <Menu>
             <MenuContent>
+                <Icon>menu</Icon>
                 <Mark>
                     <h2>Loja Virtual</h2>
                 </Mark>
@@ -18,7 +19,7 @@ export default function MainMenu(){
                     <div><Icon>search</Icon></div>
                 </Search>
                 <AccountInformation>
-                    <a href = '#'>Olá, Faça seu login<br/>Contas e Listas</a>
+                    <a href = '#'>Login</a>
                     <a  href = '#'>Devoluções e <br/>Pedidos</a>
                     <a  href = '#'><Icon>shopping_cart</Icon></a>
                 </AccountInformation>
