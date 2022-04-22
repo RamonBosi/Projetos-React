@@ -7,14 +7,17 @@ export const FilterByValue = styled.aside`
     padding: 10px;
     height: 90px;
     border-radius: 10px;
+    width: 300px;
 
     > h2{
         font-size: 1.8rem;
-        margin: 0 0 10px 0;
         text-align: center;
+        flex-grow: 1;
     }
 
     > div{
+        align-self: center;
+        margin: 8px 0 0 0;
 
         > input{
             font-size: 1.5rem;
@@ -49,5 +52,9 @@ export const FilterByValue = styled.aside`
                 background-color: rgba(0, 255, 56, 0.9);
             }
         }
+    }
+
+    @media(max-width: 1450px){
+        align-self: center;
     }
 `

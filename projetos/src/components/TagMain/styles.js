@@ -4,5 +4,9 @@ export const TagMain = styled.main`
     display: flex;
     justify-content: space-around;
     padding: 10px;
-    color: var(--default-white); 
+    color: var(--default-white);
+    
+    @media(max-width: 500px){
+        flex-direction: column;
+    }
 `
