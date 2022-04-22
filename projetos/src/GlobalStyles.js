@@ -32,9 +32,9 @@ export const GlobalStyles = createGlobalStyle`
         text-decoration: none;
     }
 
-    @media(max-width: 400px){
+    @media(max-width: 343px){
         html{
-            font-size: 55%;
+            font-size: 56%;
         }
     }
 `

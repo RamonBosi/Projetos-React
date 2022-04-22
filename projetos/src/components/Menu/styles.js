@@ -12,8 +12,8 @@ export const Menu = styled.header`
     padding: 15px;
     border-bottom: 5px solid var(--default-black);
 
-    @media(max-width: 400px){
-        padding: 8px;
+    @media(max-width: 1310px){
+        padding: 8px 8px 8px 11px;
     }
 `
 
@@ -29,8 +29,8 @@ export const MenuContent = styled.div`
         font-size: 3.8rem;
     }
     
-    @media(max-width: 400px){
-        height: 250px;
+    @media(max-width: 1310px){
+        height: 220px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, 80px);
@@ -39,17 +39,30 @@ export const MenuContent = styled.div`
             const {Mark, Address, Search, AccountInformation} = gridAreaNames
 
             return `
-                ". ${Mark} ${AccountInformation} ${AccountInformation}"
-                "${Search} ${Search} ${Search} ${Search}"
+                ". ${Mark} ${Mark} . "
+                "${Search} ${Search} ${AccountInformation} ${AccountInformation}"
                 "${Address} ${Address} ${Address} ."
             ` 
         }};
-        justify-items: center;
 
         > span{
             display: block;
-            justify-self: flex-start;
+            justify-self: center;
+            padding: 0 5px 0 0;
         }
+    }
+
+    @media(max-width: 900px){
+        grid-template-areas: ${() => {
+
+        const {Mark, Address, Search, AccountInformation} = gridAreaNames
+
+        return `
+            ". ${Mark} ${Mark} ${AccountInformation} "
+            "${Search} ${Search} ${Search} ${Search}"
+            "${Address} ${Address} ${Address} ."
+        ` 
+        }};
     }
 `
 
@@ -60,8 +73,20 @@ export const Mark = styled.div`
         color: var(--brand-color);
     }
 
-    @media(max-width: 400px){
+    @media(max-width: 1310px){
         grid-area: ${gridAreaNames.Mark};
+        justify-self: center;
+
+        > h2{
+            font-size: 2.6rem;
+        }
+    }
+
+    @media(max-width: 353px){
+
+        > h2{
+            font-size: 2.2rem;
+        }
     }
 `
 
@@ -76,15 +101,18 @@ export const Address = styled.a`
         border: 2px solid rgba(255, 255, 255, 100);
     }
 
-    @media(max-width: 400px){
+    @media(max-width: 1310px){
         grid-area: ${gridAreaNames.Address};
         justify-self: flex-start;
+        align-self: flex-start;
     }
 `
 
 export const Search = styled.div`
     display:flex;
     height: 40px;
+    width: 95%;
+    max-width: 650px;
     
     > input{
         width: 100%;
@@ -117,7 +145,7 @@ export const Search = styled.div`
         }
     }
 
-    @media(max-width: 400px){
+    @media(max-width: 1310px){
         grid-area: ${gridAreaNames.Search};
         justify-self: center;
     }
@@ -147,11 +175,18 @@ export const AccountInformation = styled.div`
        }
    }
 
-   @media(max-width: 400px){
-       grid-area: ${gridAreaNames.AccountInformation};
-        
+   @media(max-width: 1310px){
+        grid-area: ${gridAreaNames.AccountInformation};
+        justify-content: space-evenly;
+
         > a{
-            margin: 0;
+            margin: 0 5px;
+
+        }
+    }
+
+    @media(max-width: 900px){
+        > a{
 
             :nth-of-type(2){
                 display: none;
