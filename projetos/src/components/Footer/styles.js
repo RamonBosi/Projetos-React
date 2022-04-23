@@ -4,13 +4,20 @@ export const Footer = styled.footer`
     background-color: var(--elements-background-color);
     padding: 20px 10px 10px 10px;
     margin: 30px 0 0 0;
+    border-top: 5px solid var(--default-black);
+`
+
+export const FooterContent = styled.div`
     display: flex;
     flex-direction: column;
-    border-top: 5px solid var(--default-black);
-
+    
     > div > h2{
         text-align: center;
         padding: 20px;
+    }
+
+    @media(max-width: 1290px){
+       padding: 20px;
     }
 `
 
@@ -25,7 +32,7 @@ export const  Options = styled.div`
             color: var(--default-white);
         }
 
-        > ul{
+        > nav > ul{
             list-style-type: none;
 
             > li{
@@ -39,5 +46,12 @@ export const  Options = styled.div`
                 }
             }
         }
+    }
+
+    @media(max-width: 1290px){
+        justify-content: none;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 80px 0;
     }
 `
