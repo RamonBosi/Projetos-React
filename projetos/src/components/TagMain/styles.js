@@ -2,11 +2,10 @@ import styled from 'styled-components'
 
 export const TagMain = styled.main`
     display: flex;
-    justify-content: space-around;
     padding: 10px;
     color: var(--default-white);
     
-    @media(max-width: 500px){
+    @media(max-width: 860px){
         flex-direction: column;
     }
 `
