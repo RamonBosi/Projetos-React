@@ -1,13 +1,17 @@
-import { Footer, Options, FooterContent } from './styles'
+import { Footer, Options, FooterContent, Option } from './styles'
 import { Mark } from '../Menu/styles'
+import Icon from '../Icons'
 
 export default function CreateFooter(){
     return(
         <Footer>
             <FooterContent>
                 <Options>
-                    <div>
-                        <h2>Conheça-nos</h2>
+                    <Option>
+                        <div>
+                            <h2>Conheça-nos</h2>
+                            <span className = 'material-icons'>expand_more</span>    
+                        </div>
                         <nav>
                             <ul>
                                 <li><a href = '#'>Informações corporativas</a></li>
@@ -18,9 +22,12 @@ export default function CreateFooter(){
                                 <li><a href = '#'>Loja Science</a></li>
                             </ul>
                         </nav>
-                    </div>
-                    <div>
-                        <h2>Ganhe dinheiro conosco</h2>
+                    </Option>
+                    <Option>
+                        <div>
+                            <h2>Ganhe dinheiro conosco</h2>
+                            <span className = 'material-icons'>expand_more</span>  
+                        </div>
                         <nav>
                             <ul>
                                 <li><a href = '#'>Publique seus projetos</a></li>
@@ -29,9 +36,12 @@ export default function CreateFooter(){
                                 <li><a href = '#'>Anúncie seus produtos</a></li>
                             </ul>
                         </nav>
-                    </div>
-                    <div>
-                        <h2>Deixe-nos ajudar voçê</h2>
+                    </Option>
+                    <Option>
+                        <div>
+                            <h2>Deixe-nos ajudar voçê</h2>
+                            <span className = 'material-icons'>expand_more</span>  
+                        </div>
                         <nav>
                             <ul>
                                 <li><a href = '#'>Loja e COVID-19</a></li>
@@ -42,15 +52,18 @@ export default function CreateFooter(){
                                 <li><a href = '#'>Ajuda</a></li>
                             </ul>
                         </nav>
-                    </div>
-                    <div>
-                        <h2>Pagamentos</h2>
+                    </Option>
+                    <Option>
+                        <div>
+                            <h2>Pagamentos</h2>
+                            <span className = 'material-icons'>expand_more</span>
+                        </div>
                         <nav>
                             <ul>
                                 <li><a href = '#'>Cartão de crédito, cartões de debito, Boletos e Pix</a></li>
                             </ul>
                         </nav>
-                    </div>
+                    </Option>
                 </Options>
                 <Mark>
                     <h2>Loja Virtual</h2>
