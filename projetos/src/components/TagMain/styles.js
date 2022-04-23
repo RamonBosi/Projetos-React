@@ -5,7 +5,7 @@ export const TagMain = styled.main`
     padding: 10px;
     color: var(--default-white);
     
-    @media(max-width: 860px){
+    @media(max-width: 1400px){
         flex-direction: column;
     }
 `

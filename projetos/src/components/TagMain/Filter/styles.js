@@ -54,7 +54,7 @@ export const FilterByValue = styled.aside`
         }
     }
 
-    @media(max-width: 860px){
+    @media(max-width: 1400px){
         align-self: center;
     }
 `

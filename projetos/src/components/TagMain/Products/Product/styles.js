@@ -19,7 +19,7 @@ export const Product = styled.div`
             display:flex;
             justify-content: center;
             align-items: center;
-            width: 220px;
+            width: 100%;
             height: 300px;
             background-color: rgba(74, 68, 68);
             margin: 0 0 10px 0;
@@ -33,5 +33,9 @@ export const Product = styled.div`
                 margin: 10px 0;
             }
         }
+    }
+
+    @media(max-width: 600px){
+        width: 290px;
     }
 `

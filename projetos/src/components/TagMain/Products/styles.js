@@ -9,18 +9,20 @@ export const Products = styled.div`
     gap: 10px 25px;
 
     @media(max-width: 1400px){
-        grid-template-columns: repeat(3, 250px)
+        gap: 10px 0;
+        margin: 10px 0 0 0;
+        justify-content: space-evenly;
     }
 
-    @media(max-width: 1130px){
-        grid-template-columns: repeat(2, 250px)
+    @media(max-width: 1100px){
+        grid-template-columns: repeat(3, 250px);
     }
 
     @media(max-width: 860px){
-        margin: 10px 0 0 0;
+        grid-template-columns: repeat(2, 250px);
     }
 
-    @media(max-width: 590px){
-        grid-template-columns: repeat(1, 250px);
+    @media(max-width: 600px){
+        grid-template-columns: repeat(1, 300px);
     }
 `
