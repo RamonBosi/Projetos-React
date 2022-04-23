@@ -1,8 +1,29 @@
 import { Footer, Options, FooterContent, Option } from './styles'
 import { Mark } from '../Menu/styles'
-import Icon from '../Icons'
+import { useRef, useState } from 'react'
 
 export default function CreateFooter(){
+
+    const optionsRef = {
+        conhecanos: useRef(),
+        ganheDinheiroConosco: useRef(),
+        deixeNosAjudarVoce: useRef(),
+        pagamentos: useRef()
+    }
+
+    const {conhecanos, ganheDinheiroConosco, deixeNosAjudarVoce, pagamentos} = optionsRef
+
+    const [isShown, setIsShow] = useState(null)
+
+    const show = (optionSelected) =>{
+        const refs = [conhecanos, ganheDinheiroConosco, deixeNosAjudarVoce, pagamentos]
+        refs.map((option) => option.current.style.display = 'none')
+        if(isShown === null || isShown !== optionSelected.current){
+            optionSelected.current.style.display = 'block'
+            setIsShow(optionSelected.current)
+        }
+    }
+
     return(
         <Footer>
             <FooterContent>
@@ -10,9 +31,11 @@ export default function CreateFooter(){
                     <Option>
                         <div>
                             <h2>Conheça-nos</h2>
-                            <span className = 'material-icons'>expand_more</span>    
+                            <span 
+                            onClick = {() => show(conhecanos)}
+                            className = 'material-icons'>expand_more</span>    
                         </div>
-                        <nav>
+                        <nav ref = {conhecanos}>
                             <ul>
                                 <li><a href = '#'>Informações corporativas</a></li>
                                 <li><a href = '#'>Carreiras</a></li>
@@ -26,9 +49,11 @@ export default function CreateFooter(){
                     <Option>
                         <div>
                             <h2>Ganhe dinheiro conosco</h2>
-                            <span className = 'material-icons'>expand_more</span>  
+                            <span 
+                            onClick = {() => show(ganheDinheiroConosco)}
+                            className = 'material-icons'>expand_more</span>  
                         </div>
-                        <nav>
+                        <nav ref = {ganheDinheiroConosco}>
                             <ul>
                                 <li><a href = '#'>Publique seus projetos</a></li>
                                 <li><a href = '#'>Seja um associado</a></li>
@@ -40,9 +65,11 @@ export default function CreateFooter(){
                     <Option>
                         <div>
                             <h2>Deixe-nos ajudar voçê</h2>
-                            <span className = 'material-icons'>expand_more</span>  
+                            <span 
+                            onClick = {() => show(deixeNosAjudarVoce)}
+                            className = 'material-icons'>expand_more</span>  
                         </div>
-                        <nav>
+                        <nav ref = {deixeNosAjudarVoce}>
                             <ul>
                                 <li><a href = '#'>Loja e COVID-19</a></li>
                                 <li><a href = '#'>Sua conta</a></li>
@@ -56,9 +83,11 @@ export default function CreateFooter(){
                     <Option>
                         <div>
                             <h2>Pagamentos</h2>
-                            <span className = 'material-icons'>expand_more</span>
+                            <span 
+                            onClick = {() => show(pagamentos)}
+                            className = 'material-icons'>expand_more</span>
                         </div>
-                        <nav>
+                        <nav ref = {pagamentos}>
                             <ul>
                                 <li><a href = '#'>Cartão de crédito, cartões de debito, Boletos e Pix</a></li>
                             </ul>
