@@ -49,9 +49,14 @@ export const  Options = styled.div`
     }
 
     @media(max-width: 1290px){
-        justify-content: none;
         display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap: 80px 0;
+        grid-template-columns: repeat(2,400px);
+        justify-content: space-evenly;
+        justify-items: flex-start;
+        gap: 40px 0;
+    }
+
+    @media(max-width: 850px){
+        grid-template-columns: repeat(1, 80%);
     }
 `
