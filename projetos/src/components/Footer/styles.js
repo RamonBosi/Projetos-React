@@ -51,16 +51,23 @@ export const Option = styled.div`
         }
     }
 
-    > nav > ul{
-        list-style-type: none;
+    > nav{
 
-        > li{
-            margin: 15px 0;
+        &.mostrarOcultar{
+            display: block;
+        }
 
-            > a{
+        > ul{
+            list-style-type: none;
 
-                :hover{
-                    text-decoration:underline;
+            > li{
+                margin: 15px 0;
+
+                > a{
+
+                    :hover{
+                        text-decoration:underline;
+                    }
                 }
             }
         }
@@ -101,8 +108,11 @@ export const Option = styled.div`
         }
 
         > nav{
-            display: none;
             padding: 0 0 0 10px;
+
+            &.mostrarOcultar{
+                display: none;
+            }
         }
     }
 
