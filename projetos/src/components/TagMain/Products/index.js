@@ -8,13 +8,14 @@ export default function CreateProducts(){
 
     const objProducts = () =>{
         for(let n = 1; n <= 4; n++){
-            setProducts(...p, n)
+            setProducts(p.push(n))
         }
+        console.log(p)
     }
 
     return(
         <Products>
-            <button onClick = {() => console.log(p)}>Mostrar</button>
+            <button onClick = {() => objProducts()}>Mostrar</button>
         </Products>
     )
 }
