@@ -53,7 +53,7 @@ export const Option = styled.div`
 
     > nav{
 
-        &.mostrarOcultar{
+        &.showHide{
             display: block;
         }
 
@@ -110,7 +110,7 @@ export const Option = styled.div`
         > nav{
             padding: 0 0 0 10px;
 
-            &.mostrarOcultar{
+            &.showHide{
                 display: none;
             }
         }
