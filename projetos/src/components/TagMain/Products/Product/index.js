@@ -6,7 +6,7 @@ export default function CreateProduct({ value, id }){
             <div><p>Imagem do produto</p></div>
             <div>
                 <p>Nome do produto</p>
-                <p>R$ {value}</p>
+                <p>R$ {value},99</p>
             </div>
         </Product>
     )    
