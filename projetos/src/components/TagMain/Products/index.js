@@ -6,23 +6,24 @@ export default function CreateProducts(){
 
     const [loadProducts] = useState(() =>{
 
-        if(!localStorage.getItem('standardProducts')){
+        const standardProductKey = 'standardProducts'
+        
+        if(!localStorage.getItem(standardProductKey)){
             const maximumValue = 500
             const minimumValue = 200
             const quantityOfProducts = 4
-            const objproducts = []
+            const objProducts = []
     
             for(let n = 1;n <= quantityOfProducts; n++){
                 const value = Math.floor(Math.random() * (maximumValue - minimumValue + 1 ) ) + minimumValue
     
-                objproducts.push({id: n, value: value})
+                objProducts.push({id: n, value: value})
             }
 
-            const jsonProducts = JSON.stringify(objproducts)
-            localStorage.setItem('standardProducts', jsonProducts)
+            localStorage.setItem(standardProductKey, JSON.stringify(objProducts))
         }
 
-        const products = JSON.parse(localStorage.getItem('standardProducts'))
+        const products = JSON.parse(localStorage.getItem(standardProductKey))
 
         const vetorProducts = []
         for(let product in products){
