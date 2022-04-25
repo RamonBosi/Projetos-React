@@ -17,7 +17,7 @@ export default function CreateProducts(){
             for(let n = 1;n <= quantityOfProducts; n++){
                 const value = Math.floor(Math.random() * (maximumValue - minimumValue + 1 ) ) + minimumValue
     
-                objProducts.push({id: n, value: value})
+                objProducts.push({id: `product${n}`, value: value})
             }
 
             localStorage.setItem(standardProductKey, JSON.stringify(objProducts))
