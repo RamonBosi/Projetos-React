@@ -1,12 +1,12 @@
 import { Product } from "./styles";
 
-export default function CreateProduct(){
+export default function CreateProduct({ value, id }){
     return(
-        <Product>
+        <Product id = {id}>
             <div><p>Imagem do produto</p></div>
             <div>
                 <p>Nome do produto</p>
-                <p>R$50,00</p>
+                <p>R$ {value},99</p>
             </div>
         </Product>
     )    

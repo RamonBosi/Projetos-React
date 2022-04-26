@@ -1,8 +1,42 @@
 import { Footer, Options, FooterContent, Option } from './styles'
 import { Mark } from '../Menu/styles'
-import Icon from '../Icons'
+import { useRef } from 'react'
 
 export default function CreateFooter(){
+
+    const optionsRef = {
+        conhecanos: useRef(),
+        ganheDinheiroConosco: useRef(),
+        deixeNosAjudarVoce: useRef(),
+        pagamentos: useRef()
+    }
+
+    const {conhecanos, ganheDinheiroConosco, deixeNosAjudarVoce, pagamentos} = optionsRef
+
+    const showHide = (optionSelected) =>{
+        
+        const selectedOptionClass = optionSelected.current.classList
+        const showHideClass = 'showHide'
+        const addShowHideClass = () => {
+
+            const options = [
+                conhecanos, ganheDinheiroConosco, deixeNosAjudarVoce, pagamentos
+            ]
+
+            options.map((option) => {
+                const classOption = option.current.classList
+                classOption.add(showHideClass)
+            })
+        }
+
+        if(selectedOptionClass.contains(showHideClass)){
+            addShowHideClass()
+            selectedOptionClass.toggle(showHideClass)
+        }else{
+            selectedOptionClass.toggle(showHideClass)
+        }
+    }
+
     return(
         <Footer>
             <FooterContent>
@@ -10,9 +44,11 @@ export default function CreateFooter(){
                     <Option>
                         <div>
                             <h2>Conheça-nos</h2>
-                            <span className = 'material-icons'>expand_more</span>    
+                            <span 
+                            onClick = {() => showHide(conhecanos)}
+                            className = 'material-icons'>expand_more</span>    
                         </div>
-                        <nav>
+                        <nav ref = {conhecanos} className = 'showHide'>
                             <ul>
                                 <li><a href = '#'>Informações corporativas</a></li>
                                 <li><a href = '#'>Carreiras</a></li>
@@ -26,9 +62,11 @@ export default function CreateFooter(){
                     <Option>
                         <div>
                             <h2>Ganhe dinheiro conosco</h2>
-                            <span className = 'material-icons'>expand_more</span>  
+                            <span 
+                            onClick = {() => showHide(ganheDinheiroConosco)}
+                            className = 'material-icons'>expand_more</span>  
                         </div>
-                        <nav>
+                        <nav ref = {ganheDinheiroConosco} className = 'showHide'>
                             <ul>
                                 <li><a href = '#'>Publique seus projetos</a></li>
                                 <li><a href = '#'>Seja um associado</a></li>
@@ -40,9 +78,11 @@ export default function CreateFooter(){
                     <Option>
                         <div>
                             <h2>Deixe-nos ajudar voçê</h2>
-                            <span className = 'material-icons'>expand_more</span>  
+                            <span 
+                            onClick = {() => showHide(deixeNosAjudarVoce)}
+                            className = 'material-icons'>expand_more</span>  
                         </div>
-                        <nav>
+                        <nav ref = {deixeNosAjudarVoce} className = 'showHide'>
                             <ul>
                                 <li><a href = '#'>Loja e COVID-19</a></li>
                                 <li><a href = '#'>Sua conta</a></li>
@@ -56,9 +96,11 @@ export default function CreateFooter(){
                     <Option>
                         <div>
                             <h2>Pagamentos</h2>
-                            <span className = 'material-icons'>expand_more</span>
+                            <span 
+                            onClick = {() => showHide(pagamentos)}
+                            className = 'material-icons'>expand_more</span>
                         </div>
-                        <nav>
+                        <nav ref = {pagamentos} className = 'showHide'>
                             <ul>
                                 <li><a href = '#'>Cartão de crédito, cartões de debito, Boletos e Pix</a></li>
                             </ul>
