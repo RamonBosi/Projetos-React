@@ -6,7 +6,6 @@ export const Product = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     padding: 10px;
     width: 240px;
     height: 370px;
@@ -15,17 +14,20 @@ export const Product = styled.div`
 
     > div{
 
-        :nth-of-type(1){
-            display:flex;
+        :nth-child(1){
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 300px;
-            background-color: rgba(74, 68, 68);
-            margin: 0 0 10px 0;
+            
+            > img{
+                width: 100%;
+                background-color: rgba(74, 68, 68);
+                margin: 0 0 10px 0;
+            }
         }
 
-        :nth-of-type(2){
+        :nth-child(2){
             align-self: flex-start;
 
             > p{

@@ -11,7 +11,7 @@ export default function CreateProducts(){
         if(!localStorage.getItem(standardProductKey)){
             const maximumValue = 500
             const minimumValue = 200
-            const quantityOfProducts = 20
+            const quantityOfProducts = 1
             const objProducts = []
     
             for(let n = 1;n <= quantityOfProducts; n++){
