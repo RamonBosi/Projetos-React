@@ -1,13 +1,13 @@
-// import Menu from "./components/Menu";
+import Menu from "./components/Menu";
 import TagMain from "./components/TagMain";
-// import Footer from './components/Footer'
+import Footer from './components/Footer'
 
 export default function App() {
   return (
     <>
-      {/* <Menu/> */}
+      <Menu/>
       <TagMain/>
-      {/* <Footer/> */}
+      <Footer/>
     </>
   );
 }
