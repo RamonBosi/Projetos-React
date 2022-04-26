@@ -64,7 +64,13 @@ export default function CreateFilter(){
 
     return(
         <FilterByValue>
-            <h2>Filtrar por valor</h2>
+            <div>
+                <span 
+                className = 'material-icons' 
+                title='Resetar filtro'
+                onClick = {() => showProducts()}>filter_alt_off</span>
+                <h2>Filtrar por valor</h2>
+            </div>
             <div>
                 <input ref = {valueMin} type = 'number' placeholder='Mínimo'/>
                 <input ref = {valueMax} type = 'number' placeholder='Máximo'/>

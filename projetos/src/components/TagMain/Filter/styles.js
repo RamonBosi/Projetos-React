@@ -5,17 +5,34 @@ export const FilterByValue = styled.aside`
     flex-direction: column;
     background-color: var(--elements-background-color);
     padding: 10px;
-    height: 90px;
+    height: 100px;
     border-radius: 10px;
     width: 300px;
 
-    > h2{
-        font-size: 1.8rem;
-        text-align: center;
-        flex-grow: 1;
+    > div:nth-child(1){
+        display: flex;
+        align-items: center;
+
+        > h2{
+            font-size: 1.8rem;
+            text-align: center;
+            flex-grow: 1;
+            padding: 0 8px 0 0;
+        }
+
+        > span{
+            font-size: 2.4rem;
+            padding:5px;
+            cursor: pointer;
+            border-radius: 10px;
+
+            :hover{
+                background-color: rgba(0,0,0,0.2)
+            }
+        }
     }
 
-    > div{
+    > div:nth-child(2){
         align-self: center;
         margin: 8px 0 0 0;
 
