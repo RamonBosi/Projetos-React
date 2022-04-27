@@ -1,13 +1,9 @@
-import Menu from "./components/Menu";
-import TagMain from "./components/TagMain";
-import Footer from './components/Footer'
+import VirtualStore from "./Projects/VirtualStore";
 
 export default function App() {
   return (
     <>
-      <Menu/>
-      <TagMain/>
-      <Footer/>
+      <VirtualStore/>
     </>
-  );
+  )
 }
