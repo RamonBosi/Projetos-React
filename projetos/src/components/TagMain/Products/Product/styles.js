@@ -19,6 +19,7 @@ export const Product = styled.div`
     > div{
 
         :nth-child(1){
+            flex-grow: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -32,10 +33,6 @@ export const Product = styled.div`
         }
 
         :nth-child(2){
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
 
             > p{
                 font-size: 2rem;

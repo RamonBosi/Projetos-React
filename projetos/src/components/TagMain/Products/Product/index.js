@@ -1,14 +1,14 @@
 import { Product } from "./styles";
 
-export default function CreateProduct({ value, id }){
+export default function CreateProduct({ value, id, src }){
     return(
         <Product id = {id}>
             <div>
-                <img src = 'https://compaq.vteximg.com.br/arquivos/ids/155450-1200-1200/Compaq_Presario_430_450_Ang_10_MS.jpg?v=637565485061500000'/>
+                <img src = {src}/>
             </div>
             <div>
                 <p>Nome do produto</p>
-                <p>R$ {value},99</p>
+                <p>R$ {value},00</p>
             </div>
         </Product>
     )    
