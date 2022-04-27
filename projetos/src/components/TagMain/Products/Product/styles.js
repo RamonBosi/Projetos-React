@@ -8,36 +8,39 @@ export const Product = styled.div`
     justify-content: center;
     padding: 10px;
     width: 240px;
-    height: 370px;
+    height: 340px;
     cursor: pointer;
     border-radius: 10px;
+
+    :hover{
+        transform: scale(102%);
+    }
 
     > div{
 
         :nth-child(1){
-            flex-grow: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
             
             > img{
+                border-radius: 10px;
                 width: 100%;
                 background-color: rgba(74, 68, 68);
-                margin: 0 0 10px 0;
             }
         }
 
         :nth-child(2){
-            align-self: flex-start;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
 
             > p{
                 font-size: 2rem;
-                margin: 10px 0;
+                margin: 7px 0;
             }
         }
-    }
-
-    @media(max-width: 600px){
-        width: 290px;
     }
 `
