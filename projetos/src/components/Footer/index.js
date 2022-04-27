@@ -4,14 +4,12 @@ import { useRef } from 'react'
 
 export default function CreateFooter(){
 
-    const optionsRef = {
+    const {conhecanos, ganheDinheiroConosco, deixeNosAjudarVoce, pagamentos} = {
         conhecanos: useRef(),
         ganheDinheiroConosco: useRef(),
         deixeNosAjudarVoce: useRef(),
         pagamentos: useRef()
     }
-
-    const {conhecanos, ganheDinheiroConosco, deixeNosAjudarVoce, pagamentos} = optionsRef
 
     const showHide = (optionSelected) =>{
         
@@ -23,7 +21,7 @@ export default function CreateFooter(){
                 conhecanos, ganheDinheiroConosco, deixeNosAjudarVoce, pagamentos
             ]
 
-            options.map((option) => {
+            options.forEach((option) => {
                 const classOption = option.current.classList
                 classOption.add(showHideClass)
             })

@@ -8,24 +8,29 @@ export default function CreateFilter(){
         valueMax: useRef()
     }
 
-    const showProducts = () =>{
+    const resetFilters = (resetByIcon = false) =>{
 
         const jsonProducts = JSON.parse(localStorage.getItem('standardProducts'))
 
-        jsonProducts.map((product) => {
+        jsonProducts.forEach((product) => {
             const idProduct = product.id
             document.querySelector(`#${idProduct}`).removeAttribute('style')
         })
+
+        if(resetByIcon){
+            valueMin.current.value = ''
+            valueMax.current.value = ''
+        }
     }
 
     const filter = (min, max) =>{
 
         if(min <= max || max === 0){
 
-            showProducts()
+            resetFilters()
             const jsonProducts = JSON.parse(localStorage.getItem('standardProducts'))
 
-            jsonProducts.map((product) => {
+            jsonProducts.forEach((product) => {
 
                 const idProduct = String(product.id)
                 const valueProduct = Number(product.value)
@@ -68,7 +73,7 @@ export default function CreateFilter(){
                 <span 
                 className = 'material-icons' 
                 title='Resetar filtro'
-                onClick = {() => showProducts()}>filter_alt_off</span>
+                onClick = {() => resetFilters(true)}>filter_alt_off</span>
                 <h2>Filtrar por valor</h2>
             </div>
             <div>
