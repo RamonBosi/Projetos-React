@@ -55,13 +55,13 @@ export const MenuContent = styled.div`
     @media(max-width: 900px){
         grid-template-areas: ${() => {
 
-        const {Mark, Address, Search, AccountInformation} = gridAreaNames
+            const {Mark, Address, Search, AccountInformation} = gridAreaNames
 
-        return `
-            ". ${Mark} ${Mark} ${AccountInformation} "
-            "${Search} ${Search} ${Search} ${Search}"
-            "${Address} ${Address} ${Address} ."
-        ` 
+            return `
+                ". ${Mark} ${Mark} ${AccountInformation} "
+                "${Search} ${Search} ${Search} ${Search}"
+                "${Address} ${Address} ${Address} ."
+            ` 
         }};
     }
 `
