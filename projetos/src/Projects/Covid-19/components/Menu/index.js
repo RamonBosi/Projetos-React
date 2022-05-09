@@ -1,6 +1,6 @@
 import { Menu, MenuContent } from './styles'
 
-export default function createMenu(){
+export default function CreateMenu(){
     return (
         <Menu>
             <MenuContent>

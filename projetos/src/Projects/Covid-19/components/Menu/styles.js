@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Menu = styled.main`
+export const Menu = styled.header`
     background-image: linear-gradient(
             90deg, rgba(6, 16, 104, 1) 30%, rgba(16, 105, 187, 1)
         );
