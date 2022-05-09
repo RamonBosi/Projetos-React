@@ -1,10 +1,11 @@
 import { GlobalStyles } from "./GlobalStyles"
+import  Menu from './components/Menu'
 
 export default function Covid19(){
     return (
         <>
             <GlobalStyles/>
-            <h1>Testando</h1>
+            <Menu/>
         </>
     )
 }
