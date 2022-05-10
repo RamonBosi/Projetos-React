@@ -13,8 +13,10 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     :root{
-        /* --page-background-color: rgba(239, 235, 225, 1); */
-        --page-background-color: grey;
+        --page-background-color: rgba(239, 235, 225, 1);
+        /* --page-background-color: grey; */
+        --color-of-titles: rgba(255, 0, 0, 1);
+        --background-color-of-elements: rgba(50, 97, 168, 0.4);
         --default-white: rgba(255, 255, 255);
         --default-black: rgba(0, 0, 0);
     }
