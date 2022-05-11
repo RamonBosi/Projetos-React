@@ -9,7 +9,7 @@ export const MainContext = styled.div`
     }
 
     > article{
-        padding: 15px 35px;
+        padding: 35px;
         margin: 25px 0;
     }
 `
