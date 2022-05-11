@@ -30,4 +30,8 @@ export const GlobalStyles = createGlobalStyle`
     a{
         text-decoration: none;
     }
+
+    h2{
+        font-size: 2.4rem;
+    }
 `
