@@ -24,30 +24,23 @@ export const MenuContent = styled.div`
         }
 
         > div{
+            align-self: flex-end;
             display: grid;
             grid-template-columns: 40px;
-            justify-content: center;
+            justify-items: center;
             align-items: center;
 
             > span{
                 grid-area: 1 / 1 / 2 / 2;
-                width: 40px;
-                height: 40px;
                 
                 :nth-child(1){
                     z-index: 10;
-
-                    :hover{
-                        background-color: orange;
-                    }
+                    width: 40px;
+                    height: 40px;
                 }
 
                 &.material-icons{
                     font-size: 3.6rem;
-        
-                    :hover{
-                        background-color: red;
-                    }
                 }  
             }
         }
