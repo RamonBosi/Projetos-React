@@ -9,11 +9,8 @@ export const MainContext = styled.div`
     }
 
     > article{
-        display: flex;
-        justify-content: center;
         padding: 35px;
         margin: 25px 0;
-        background-color: var(--secondary-elements-background-color);
 
         h2{
             color: var(--color-of-titles);
@@ -24,14 +21,6 @@ export const MainContext = styled.div`
             text-align: justify;
             color: var(--default-black);
             line-height: 23px;
-        }
-
-        > div{
-            max-width: 1350px;
-
-            > header{
-                margin: 0 0 17px 0;
-            }
         }
     }
 `
