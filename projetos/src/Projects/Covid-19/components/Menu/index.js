@@ -6,7 +6,10 @@ export default function CreateMenu(){
             <MenuContent>
                 <div>
                     <h2>Covid-19</h2>
-                    <span className = 'material-icons'>coronavirus</span>
+                    <div>
+                        <span></span>
+                        <span className = 'material-icons'>coronavirus</span>
+                    </div>
                 </div>
                 <nav>
                     <a href = ''>O que é Covid-19</a>

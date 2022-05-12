@@ -23,10 +23,33 @@ export const MenuContent = styled.div`
             font-size: 2.4rem;
         }
 
-        > span{
-            font-size: 3.6rem;
-            align-self: flex-end;
-            padding: 0 0 5px 0;
+        > div{
+            display: grid;
+            grid-template-columns: 40px;
+            justify-content: center;
+            align-items: center;
+
+            > span{
+                grid-area: 1 / 1 / 2 / 2;
+                width: 40px;
+                height: 40px;
+                
+                :nth-child(1){
+                    z-index: 10;
+
+                    :hover{
+                        background-color: orange;
+                    }
+                }
+
+                &.material-icons{
+                    font-size: 3.6rem;
+        
+                    :hover{
+                        background-color: red;
+                    }
+                }  
+            }
         }
     }
 
