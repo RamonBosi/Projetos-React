@@ -8,9 +8,8 @@ export const Content = styled.section`
 
     > section{
 
-        > div{
-            display: flex;
-            justify-content: center;
+        > p{
+            margin: 10px 0;
         }
     }
 `

@@ -6,10 +6,10 @@ export default function BrazilGraphic(){
         <Content>
             <header><h2>Gráfico do Brasil</h2></header>
             <section>
-                <p>Gráfico geográfico do Brasil mostrando como está a evolução da covid-19</p>
-                <div>
-                    <Graphic/>
-                </div>
+                <p>
+                    Gráfico geográfico do Brasil mostrando como está a evolução da covid-19
+                </p>
+                <Graphic/>
             </section>
         </Content>
     )
