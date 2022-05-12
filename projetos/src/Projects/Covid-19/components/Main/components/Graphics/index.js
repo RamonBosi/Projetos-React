@@ -3,10 +3,10 @@ import BrazilGraphic from './components/BrazilGraphic'
 
 export default function Graphics(){
     return(
-        <article>
+        <Content>
             <div>
                 <BrazilGraphic/>
             </div>
-        </article>
+        </Content>
     )
 }

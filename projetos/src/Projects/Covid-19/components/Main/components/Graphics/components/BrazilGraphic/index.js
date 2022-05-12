@@ -1,13 +1,16 @@
 import { Content } from './styles'
+import Graphic from './Graphic'
 
 export default function BrazilGraphic(){
     return(
-        <section>
+        <Content>
             <header><h2>Gráfico do Brasil</h2></header>
             <section>
                 <p>Gráfico geográfico do Brasil mostrando como está a evolução da covid-19</p>
-                <div></div>
+                <div>
+                    <Graphic/>
+                </div>
             </section>
-        </section>
+        </Content>
     )
 }
