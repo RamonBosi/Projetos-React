@@ -20,14 +20,20 @@ export default function Graphic(){
     ]
 
     const stylesChart = {
-        width: '100%',
-        height: '100%'
+        width: '99%',
+        height: '90%',
+        margin: 'auto'
     }
 
     return(
         <Content>
+            <div>
+                <button>Suspeitos</button>
+                <button>Casos</button>
+                <button>Mortes</button>
+            </div>
             <Chart
-                chartType = "ColumnChart"
+                chartType = "BarChart"
                 data = {data}
                 style = {stylesChart}
             />
