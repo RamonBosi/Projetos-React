@@ -9,11 +9,11 @@ export const Content = styled.section`
     > section{
 
         > select{
+            background-color: var(--primary-elements-background-color);
+            color: var(--default-white);
+            font-size: 2rem;
             width: 30%;
             margin: 10px 0 0 0;
-            font-size: 2rem;
-            color: var(--default-white);
-            background-color: var(--primary-elements-background-color);
             padding: 15px;
             border-radius: 10px;
         }
