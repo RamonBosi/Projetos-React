@@ -8,14 +8,25 @@ export const Content = styled.section`
 
     > section{
 
-        > select{
-            background-color: var(--primary-elements-background-color);
-            color: var(--default-white);
-            font-size: 2rem;
+        > div{
+            background-image: url('./Icon/selectIcon.png');
+            background-repeat: no-repeat;
+            background-position: center center;
             width: 30%;
-            margin: 10px 0 0 0;
-            padding: 15px;
-            border-radius: 10px;
+
+            > select{
+                background-color: transparent;
+                
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+
+                color: var(--default-white);
+                font-size: 2rem;
+                margin: 10px 0 0 0;
+                padding: 15px;
+                border-radius: 10px;
+            }
         }
     }
 `
