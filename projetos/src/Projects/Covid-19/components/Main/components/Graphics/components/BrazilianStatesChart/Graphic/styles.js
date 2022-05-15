@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const Content = styled.div`
-    margin: 10px 0 0 0;
+    height: 600px;
+    margin: 15px 0 0 0;
 
     > div{
 
@@ -41,6 +42,11 @@ export const Content = styled.div`
                     background-color: var(--primary-elements-background-color);
                 }
             }
+        }
+
+        :nth-child(2){
+            margin: 15px 0 0 0;
+            height: 80%;
         }
     }
 `
