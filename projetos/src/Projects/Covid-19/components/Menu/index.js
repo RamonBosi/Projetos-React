@@ -5,10 +5,16 @@ export default function CreateMenu(){
         <Menu>
             <MenuContent>
                 <div>
-                    <h2>Covid-19</h2>
+                    <span>
+                        <h2>Covid-19</h2>
+                        <div>
+                            <span></span>
+                            <span className = 'material-icons'>coronavirus</span>
+                        </div>
+                    </span>
                     <div>
                         <span></span>
-                        <span className = 'material-icons'>coronavirus</span>
+                        <span className = 'material-icons'>menu</span>
                     </div>
                 </div>
                 <nav>
@@ -18,6 +24,15 @@ export default function CreateMenu(){
                     <a href = ''>Gráficos</a>
                     <a href = ''>Prevenção</a>
                 </nav>
+                <div>
+                    <nav>
+                        <a href = ''>O que é Covid-19</a>
+                        <a href = ''>Transmissão</a>
+                        <a href = ''>Sintomas</a>
+                        <a href = ''>Gráficos</a>
+                        <a href = ''>Prevenção</a>
+                    </nav>
+                </div>
             </MenuContent>
         </Menu>
     )
