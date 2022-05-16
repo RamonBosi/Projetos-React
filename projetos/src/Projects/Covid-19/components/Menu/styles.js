@@ -19,8 +19,30 @@ export const MenuContent = styled.div`
     height: 100%;
 
     > div{
-        
+
         :nth-child(1){
+
+            div{
+                display: grid;
+                grid-template-columns: 40px;
+                justify-items: center;
+                align-items: center;
+                color: var(--default-white);
+
+                > span{
+                    grid-area: 1 / 1 / 2 / 2;
+                    
+                    :nth-child(1){
+                        z-index: 10;
+                        width: 40px;
+                        height: 40px;
+                    }
+    
+                    &.material-icons{
+                        font-size: 3.6rem;
+                    }  
+                }
+            }
 
             > span{
                 display: flex;
@@ -31,27 +53,9 @@ export const MenuContent = styled.div`
                 > h2{
                     font-size: 2.4rem;
                 }
-        
+
                 > div{
-                    display: grid;
-                    grid-template-columns: 40px;
-                    justify-items: center;
-                    align-items: center;
                     padding: 16px 0 0 0;
-        
-                    > span{
-                        grid-area: 1 / 1 / 2 / 2;
-                        
-                        :nth-child(1){
-                            z-index: 10;
-                            width: 40px;
-                            height: 40px;
-                        }
-        
-                        &.material-icons{
-                            font-size: 3.6rem;
-                        }  
-                    }
                 }
             }
 
@@ -101,28 +105,10 @@ export const MenuContent = styled.div`
                 }
 
                 > div{
-                    grid-area: 1 / 3 / 2 / 4;
                     display: grid;
-                    grid-template-columns: 40px;
-                    justify-items: center;
-                    align-items: center;
+                    grid-area: 1 / 3 / 2 / 4;
                     cursor: pointer;
                     margin: 0 0 0 15px;
-        
-                    > span{
-                        grid-area: 1 / 1 / 2 / 2;
-                        
-                        :nth-child(1){
-                            z-index: 10;
-                            width: 40px;
-                            height: 40px;
-                        }
-        
-                        &.material-icons{
-                            font-size: 3.6rem;
-                            color: var(--default-white);
-                        }  
-                    }
                 }
             }
 
