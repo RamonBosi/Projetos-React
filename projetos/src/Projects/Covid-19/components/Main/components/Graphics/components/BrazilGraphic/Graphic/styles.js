@@ -54,4 +54,8 @@ export const Content = styled.div`
             }
         }
     }
+
+    @media(max-width: 340px){
+        padding: 20px 10px;
+    }
 `

@@ -4,25 +4,22 @@ import { Chart } from 'react-google-charts'
 export default function Graphic(){
 
     const data = [
-        ['Empresa', 'Fatura', 'Despesas'],
-        ['A', 100, 200],
-        ['B', 300, 500],
-        ['C', 600, 200],
-        ['C', 600, 200],
-        ['C', 600, 200],
-        ['C', 600, 200],
-        ['C', 600, 200],
-        ['C', 600, 200],
-        ['C', 600, 200],
-        ['C', 600, 200],
-        ['C', 600, 200],
-        ['C', 600, 200]
+        ["Country", "Popularity"],
+        ['Espírito Santo', 300],
+        ['Amazonas', 50],
+        ['Mato Grosso', 800],
+        ['Acre', 40]
     ]
 
     const stylesChart = {
         width: '99%',
         height: '90%',
         margin: 'auto'
+    }
+
+    const options = {
+        region: 'BR',
+        resolution: 'provinces',
     }
 
     return(
@@ -33,9 +30,10 @@ export default function Graphic(){
                 <button>Mortes</button>
             </div>
             <Chart
-                chartType = "BarChart"
+                chartType = "GeoChart"
                 data = {data}
                 style = {stylesChart}
+                options = {options}
             />
         </Content>
     )

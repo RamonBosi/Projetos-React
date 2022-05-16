@@ -42,4 +42,19 @@ export const Container = styled.article`
             }
         }
     }
+
+    @media(max-width: 760px){
+
+        > div{
+
+            > aside{
+                flex-direction: column;
+
+                > section{
+                    width: 100%;
+                    margin: 15px 0;
+                }
+            }
+        }
+    }
 `
