@@ -1,6 +1,10 @@
+import { useState } from 'react'
 import { Menu, MenuContent } from './styles'
 
 export default function CreateMenu(){
+    
+    const [showMobileIndex, setShowMobileIndex] = useState(false)
+
     return (
         <Menu>
             <MenuContent>
@@ -12,9 +16,11 @@ export default function CreateMenu(){
                             <span className = 'material-icons'>coronavirus</span>
                         </div>
                     </span>
-                    <div>
+                    <div onClick = {() => setShowMobileIndex(!showMobileIndex)}>
                         <span></span>
-                        <span className = 'material-icons'>menu</span>
+                        <span className = 'material-icons'>
+                            {showMobileIndex ? 'cancel' : 'menu'}
+                        </span>
                     </div>
                 </div>
                 <nav>
@@ -24,7 +30,7 @@ export default function CreateMenu(){
                     <a href = ''>Gráficos</a>
                     <a href = ''>Prevenção</a>
                 </nav>
-                <div>
+                <div className = {showMobileIndex ? 'show' : 'hide'}>
                     <nav>
                         <a href = ''>O que é Covid-19</a>
                         <a href = ''>Transmissão</a>

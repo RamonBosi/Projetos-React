@@ -65,7 +65,10 @@ export const MenuContent = styled.div`
         }
 
         :nth-child(3){
-            display: none;
+
+            &.hide, &.show{
+                display: none;
+            }
         }
     }
 
@@ -113,9 +116,16 @@ export const MenuContent = styled.div`
             }
 
             :nth-child(3){
-                display: block;
                 background-color: rgba(0, 0, 0, 0.5);
                 width: 100vw;
+                
+                &.show{
+                    display: block;
+                }
+
+                &.hide{
+                    display: none;
+                }
 
                 > nav{
                     display: flex;
