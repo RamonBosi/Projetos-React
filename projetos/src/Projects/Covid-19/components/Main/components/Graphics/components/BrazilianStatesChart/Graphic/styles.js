@@ -45,7 +45,9 @@ export const Content = styled.div`
         }
 
         :nth-child(2){
+            background-color: var(--primary-elements-background-color);
             margin: 15px 0 0 0;
+            padding: 20px;
             height: 80%;
         }
     }
