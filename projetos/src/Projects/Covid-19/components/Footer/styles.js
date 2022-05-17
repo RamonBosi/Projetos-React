@@ -31,4 +31,18 @@ export const Footer = styled.footer`
             }
         }
     }
+
+    @media(max-width: 435px){
+        padding: 40px 0;
+    }
+
+    @media(max-width: 360px){
+
+        > div{
+
+            > h2{
+                font-size: 2rem;
+            }
+        }
+    }
 `
