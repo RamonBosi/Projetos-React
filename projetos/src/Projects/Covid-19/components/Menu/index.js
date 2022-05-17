@@ -11,14 +11,15 @@ export default function CreateMenu(){
         streaming,
         symptoms,
         graphics,
-        prevention
+        prevention,
+        goToTheLink
     } = useContext(ContextLinks)
 
     const Links = useMemo(()=>{
 
         return(
             <nav>
-                <a href = {`#${whatIsCovid19}`}>O que é Covid-19</a>
+                <p onClick={() => goToTheLink(whatIsCovid19)}>O que é Covid-19</p>
                 <a href = {`#${streaming}`}>Transmissão</a>
                 <a href = {`#${symptoms}`}>Sintomas</a>
                 <a href = {`#${graphics}`}>Gráficos</a>

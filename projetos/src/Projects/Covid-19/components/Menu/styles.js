@@ -4,6 +4,10 @@ export const Menu = styled.header`
     background-image: linear-gradient(90deg, rgba(6, 16, 104, 1) 30%, rgba(16, 105, 187, 1));
     padding: 15px 25px 0 25px;
     height: 85px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 
     @media(max-width: 770px){
         height: auto;

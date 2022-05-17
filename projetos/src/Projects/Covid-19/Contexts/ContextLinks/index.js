@@ -9,7 +9,16 @@ export default function ContextLinksProvider({ children }){
         streaming: 'streaming',
         symptoms: 'symptoms',
         graphics: 'graphics',
-        prevention: 'prevention'
+        prevention: 'prevention',
+        goToTheLink(id){
+
+            const linkPosition = document.querySelector(`#${id}`).getBoundingClientRect()
+            const compensate = 2
+            const a = linkPosition.y - 150
+
+            console.log(a)
+            window.scrollTo(0, 282)
+        }
     }
 
     return(
