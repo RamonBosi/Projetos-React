@@ -1,8 +1,13 @@
+import { useContext } from "react";
+import { ContextLinks } from "../../../../Contexts/ContextLinks";
 import Mold from "../Mold";
 
 export default function WhatIsCovid19(){
 
+    const { whatIsCovid19 } = useContext(ContextLinks)
+
     return <Mold 
+            id = {whatIsCovid19}
             mainTitle={'O que é Covid-19'}
             content = {
                 <p>

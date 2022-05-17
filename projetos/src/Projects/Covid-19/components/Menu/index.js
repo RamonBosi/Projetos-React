@@ -6,15 +6,15 @@ export default function CreateMenu(){
     
     const [showMobileIndex, setShowMobileIndex] = useState(false)
 
-    const Links = useMemo(()=>{
+    const {
+        whatIsCovid19, 
+        streaming,
+        symptoms,
+        graphics,
+        prevention
+    } = useContext(ContextLinks)
 
-        const {
-            whatIsCovid19, 
-            streaming,
-            symptoms,
-            graphics,
-            prevention
-        } = useContext(ContextLinks)
+    const Links = useMemo(()=>{
 
         return(
             <nav>

@@ -1,8 +1,8 @@
 import { GlobalStyles } from "./GlobalStyles"
+import ContextLinksProvider from "./Contexts/ContextLinks"
 import Menu from './components/Menu'
 import Main from './components/Main'
-import ContextLinksProvider from "./Contexts/ContextLinks"
-// import Footer from './components/Footer' 
+import Footer from './components/Footer' 
 
 export default function Covid19(){
     return (
@@ -12,7 +12,7 @@ export default function Covid19(){
                 <Menu/>
                 <Main/>
             </ContextLinksProvider>
-            {/* <Footer/> */}
+            <Footer/>
         </>
     )
 }

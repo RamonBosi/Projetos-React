@@ -1,8 +1,13 @@
+import { useContext } from 'react'
+import { ContextLinks } from '../../../../Contexts/ContextLinks'
 import { Container } from './styles'
 
 export default function Streaming(){
+
+    const { streaming } = useContext(ContextLinks)
+
     return(
-        <Container>
+        <Container id = {streaming}>
             <div>
                 <header><h2>Trasmissão</h2></header>
                 <section>

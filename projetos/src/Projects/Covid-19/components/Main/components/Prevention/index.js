@@ -1,8 +1,14 @@
+import { useContext } from 'react'
+import { ContextLinks } from '../../../../Contexts/ContextLinks'
 import Mold from '../Mold'
 
 export default function Prevention(){
+
+    const { prevention } = useContext(ContextLinks)
+
     return(
         <Mold
+            id = {prevention}
             mainTitle={'Prevenção'}
             content = {
                 <>

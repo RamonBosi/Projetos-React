@@ -1,8 +1,8 @@
 import { Container } from "./styles"
 
-export default function Mold({ mainTitle, content }){
+export default function Mold({ mainTitle, content, id }){
     return(
-        <Container>
+        <Container id = {id}>
             <div>
                 <header>
                     <h2>{mainTitle}</h2>

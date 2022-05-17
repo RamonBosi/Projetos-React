@@ -3,9 +3,7 @@ import styled from 'styled-components'
 export const Menu = styled.header`
     background-image: linear-gradient(90deg, rgba(6, 16, 104, 1) 30%, rgba(16, 105, 187, 1));
     padding: 15px 25px 0 25px;
-    width: 100vw;
     height: 85px;
-    position: fixed;
 
     @media(max-width: 770px){
         height: auto;
