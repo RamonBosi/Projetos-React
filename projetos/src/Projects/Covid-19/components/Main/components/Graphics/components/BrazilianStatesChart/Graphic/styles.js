@@ -7,7 +7,7 @@ export const Content = styled.div`
     > div{
 
         :nth-child(1){
-            width: 50%;
+            width: 70%;
             display: grid;
             grid-template-columns: 1fr;
             background-color: var(--primary-elements-background-color);
@@ -47,8 +47,18 @@ export const Content = styled.div`
         :nth-child(2){
             background-color: var(--primary-elements-background-color);
             margin: 15px 0 0 0;
-            padding: 20px;
+            padding: 15px;
             height: 80%;
+        }
+    }
+
+    @media(max-width: 700px){
+
+        > div{
+
+            :nth-child(1){
+                width: 100%;
+            }
         }
     }
 `
