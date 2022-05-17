@@ -1,9 +1,31 @@
-import { useState } from 'react'
+import { useState, useContext, useMemo } from 'react'
 import { Menu, MenuContent } from './styles'
+import { ContextLinks } from '../../Contexts/ContextLinks'
 
 export default function CreateMenu(){
     
     const [showMobileIndex, setShowMobileIndex] = useState(false)
+
+    const Links = useMemo(()=>{
+
+        const {
+            whatIsCovid19, 
+            streaming,
+            symptoms,
+            graphics,
+            prevention
+        } = useContext(ContextLinks)
+
+        return(
+            <nav>
+                <a href = {`#${whatIsCovid19}`}>O que é Covid-19</a>
+                <a href = {`#${streaming}`}>Transmissão</a>
+                <a href = {`#${symptoms}`}>Sintomas</a>
+                <a href = {`#${graphics}`}>Gráficos</a>
+                <a href = {`#${prevention}`}>Prevenção</a>
+            </nav>
+        )
+    },[])
 
     return (
         <Menu>
@@ -23,21 +45,9 @@ export default function CreateMenu(){
                         </span>
                     </div>
                 </div>
-                <nav>
-                    <a href = ''>O que é Covid-19</a>
-                    <a href = ''>Transmissão</a>
-                    <a href = ''>Sintomas</a>
-                    <a href = ''>Gráficos</a>
-                    <a href = ''>Prevenção</a>
-                </nav>
+                {Links}
                 <div className = {showMobileIndex ? 'show' : 'hide'}>
-                    <nav>
-                        <a href = ''>O que é Covid-19</a>
-                        <a href = ''>Transmissão</a>
-                        <a href = ''>Sintomas</a>
-                        <a href = ''>Gráficos</a>
-                        <a href = ''>Prevenção</a>
-                    </nav>
+                    {Links}
                 </div>
             </MenuContent>
         </Menu>
