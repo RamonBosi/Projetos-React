@@ -14,24 +14,6 @@ export default function CreateMenu(){
         prevention
     } = useContext(ContextLinks)
 
-    const Links = useMemo(()=>{
-
-        return(
-            <nav>
-                <a href = {`#${whatIsCovid19}`}>O que é Covid-19</a>
-                <a href = {`#${streaming}`}>Transmissão</a>
-                <a href = {`#${symptoms}`}>Sintomas</a>
-                <a href = {`#${graphics}`}>Gráficos</a>
-                <a href = {`#${prevention}`}>Prevenção</a>
-            </nav>
-        )
-    },[ whatIsCovid19, 
-        streaming,
-        symptoms,
-        graphics,
-        prevention
-    ])
-
     return (
         <Menu>
             <MenuContent>
@@ -50,9 +32,32 @@ export default function CreateMenu(){
                         </span>
                     </div>
                 </div>
-                {Links}
+                <nav>
+                    <a href = {`#${whatIsCovid19}`}>O que é Covid-19</a>
+                    <a href = {`#${streaming}`}>Transmissão</a>
+                    <a href = {`#${symptoms}`}>Sintomas</a>
+                    <a href = {`#${graphics}`}>Gráficos</a>
+                    <a href = {`#${prevention}`}>Prevenção</a>
+                </nav>
                 <div className = {showLinksMobile ? 'show' : 'hide'}>
-                    {Links}
+                    <nav>
+                        <a 
+                        href = {`#${whatIsCovid19}`} 
+                        onClick = {() => setShowLinksMobile(!showLinksMobile)}>O que é Covid-19
+                        </a>
+                        <a 
+                        href = {`#${streaming}`} 
+                        onClick = {() => setShowLinksMobile(!showLinksMobile)}>Transmissão</a>
+                        <a 
+                        href = {`#${symptoms}`} 
+                        onClick = {() => setShowLinksMobile(!showLinksMobile)}>Sintomas</a>
+                        <a 
+                        href = {`#${graphics}`} 
+                        onClick = {() => setShowLinksMobile(!showLinksMobile)}>Gráficos</a>
+                        <a 
+                        href = {`#${prevention}`} 
+                        onClick = {() => setShowLinksMobile(!showLinksMobile)}>Prevenção</a>
+                    </nav>
                 </div>
             </MenuContent>
         </Menu>
