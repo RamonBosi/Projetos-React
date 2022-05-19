@@ -4,29 +4,33 @@ import { ContextLinks } from '../../Contexts/ContextLinks'
 
 export default function CreateMenu(){
     
-    const [showMobileIndex, setShowMobileIndex] = useState(false)
+    const [showLinksMobile, setShowLinksMobile] = useState(false)
 
     const {
         whatIsCovid19, 
         streaming,
         symptoms,
         graphics,
-        prevention,
-        goToTheLink
+        prevention
     } = useContext(ContextLinks)
 
     const Links = useMemo(()=>{
 
         return(
             <nav>
-                <p onClick={() => goToTheLink(whatIsCovid19)}>O que é Covid-19</p>
+                <a href = {`#${whatIsCovid19}`}>O que é Covid-19</a>
                 <a href = {`#${streaming}`}>Transmissão</a>
                 <a href = {`#${symptoms}`}>Sintomas</a>
                 <a href = {`#${graphics}`}>Gráficos</a>
                 <a href = {`#${prevention}`}>Prevenção</a>
             </nav>
         )
-    },[])
+    },[ whatIsCovid19, 
+        streaming,
+        symptoms,
+        graphics,
+        prevention
+    ])
 
     return (
         <Menu>
@@ -39,15 +43,15 @@ export default function CreateMenu(){
                             <span className = 'material-icons'>coronavirus</span>
                         </div>
                     </span>
-                    <div onClick = {() => setShowMobileIndex(!showMobileIndex)}>
+                    <div onClick = {() => setShowLinksMobile(!showLinksMobile)}>
                         <span></span>
                         <span className = 'material-icons'>
-                            {showMobileIndex ? 'cancel' : 'menu'}
+                            {showLinksMobile ? 'cancel' : 'menu'}
                         </span>
                     </div>
                 </div>
                 {Links}
-                <div className = {showMobileIndex ? 'show' : 'hide'}>
+                <div className = {showLinksMobile ? 'show' : 'hide'}>
                     {Links}
                 </div>
             </MenuContent>
