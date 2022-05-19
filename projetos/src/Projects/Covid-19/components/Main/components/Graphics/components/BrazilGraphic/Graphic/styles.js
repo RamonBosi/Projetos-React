@@ -11,7 +11,6 @@ export const Content = styled.div`
         :nth-child(1){
             display: flex;
             justify-content: flex-end;
-            margin: 0 0 25px 0;
 
             > button{
                 cursor: pointer;
@@ -51,6 +50,14 @@ export const Content = styled.div`
                         background-color: rgba(255, 0, 0, 0.7);
                     }
                 }
+            }
+        }
+
+        :nth-child(2){
+            margin: 20px 0;
+            
+            > h2{
+                color: var(--default-white);
             }
         }
     }

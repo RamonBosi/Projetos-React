@@ -1,4 +1,4 @@
-import { useState, useContext, useMemo } from 'react'
+import { useState, useContext } from 'react'
 import { Menu, MenuContent } from './styles'
 import { ContextLinks } from '../../Contexts/ContextLinks'
 

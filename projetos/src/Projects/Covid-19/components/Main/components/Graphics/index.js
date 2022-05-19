@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { ContextLinks } from '../../../../Contexts/ContextLinks'
 import { Content } from './styles'
 import BrazilGraphic from './components/BrazilGraphic'
-import BrasilianStatesChart from './components/BrazilianStatesChart'
+// import BrasilianStatesChart from './components/BrazilianStatesChart'
 
 export default function Graphics(){
 
@@ -12,7 +12,7 @@ export default function Graphics(){
         <Content id = {graphics}>
             <div>
                 <BrazilGraphic/>
-                <BrasilianStatesChart/>
+                {/* <BrasilianStatesChart/> */}
             </div>
         </Content>
     )
