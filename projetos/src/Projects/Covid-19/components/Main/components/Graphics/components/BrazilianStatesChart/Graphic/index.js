@@ -1,35 +1,49 @@
+import { useContext, useEffect, useState } from "react"
+import { ContextAPI } from '../../../../../../../Contexts/API'
 import { Content } from "./styles"
-import { Chart } from 'react-google-charts'
 
 export default function Graphic(){
 
-    const { stylesChart, data } = {
-        stylesChart: {
-            width: '100%',
-            height: '100%'
-        },
-        data: [
-            ['Estado Selecionado', 'Suspeitos', 'Casos', 'Mortes'],
-            ['Espírito Santo', 300, 500, 200]
-        ]
-    }
+    const { API } = useContext(ContextAPI)
 
+    const [selectionOptions, setSelectionOptions] = useState(null)
+
+    useEffect(()=>{
+
+        API.get()
+        .then((states) =>{
+
+            const createOptions = states.data.data.map((state) => state.state).sort().map((option) => <option>{option}</option>)
+
+            setSelectionOptions(createOptions)
+        })
+        .catch(() => console.log('Algo deu errado'))
+    },[])
+    
     return(
         <Content>
             <div>
                 <span className = 'material-icons'>expand_more</span>
                 <select>
-                    <option>São Paulo</option>
-                    <option>Rio de Janeiro</option>
-                    <option>Espírito Santo</option>
+                    {selectionOptions}
                 </select>
             </div>
             <div>
-                <Chart
-                    chartType="ColumnChart"
-                    style = {stylesChart}
-                    data = {data}
-                />
+                <h2>Estado selecionado</h2>
+                <div>
+                    <span>
+                        <p>Casos:</p>
+                        <p>100</p>
+                    </span>
+                    <span>
+                        <p>Suspeitos: </p>
+                        <p>200</p>
+                    </span>
+                    <span>
+                        <p>Mortes: </p>
+                        <p>300</p>
+                    </span>
+                </div>
             </div>
         </Content>
     )

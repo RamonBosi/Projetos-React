@@ -49,6 +49,14 @@ export const Content = styled.div`
             margin: 15px 0 0 0;
             padding: 15px;
             height: 80%;
+
+            > div{
+                font-size: 3rem;
+
+                > div{
+                    display: flex;
+                }
+            }
         }
     }
 
