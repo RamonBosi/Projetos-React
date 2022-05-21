@@ -10,7 +10,7 @@ export default function CreateMenu(){
         whatIsCovid19, 
         streaming,
         symptoms,
-        graphics,
+        evolutionCovid19,
         prevention
     } = useContext(ContextLinks)
 
@@ -36,7 +36,7 @@ export default function CreateMenu(){
                     <a href = {`#${whatIsCovid19}`}>O que é Covid-19</a>
                     <a href = {`#${streaming}`}>Transmissão</a>
                     <a href = {`#${symptoms}`}>Sintomas</a>
-                    <a href = {`#${graphics}`}>Gráficos</a>
+                    <a href = {`#${evolutionCovid19}`}>Evolução da Covid-19</a>
                     <a href = {`#${prevention}`}>Prevenção</a>
                 </nav>
                 <div className = {showLinksMobile ? 'show' : 'hide'}>
@@ -52,8 +52,8 @@ export default function CreateMenu(){
                         href = {`#${symptoms}`} 
                         onClick = {() => setShowLinksMobile(!showLinksMobile)}>Sintomas</a>
                         <a 
-                        href = {`#${graphics}`} 
-                        onClick = {() => setShowLinksMobile(!showLinksMobile)}>Gráficos</a>
+                        href = {`#${evolutionCovid19}`} 
+                        onClick = {() => setShowLinksMobile(!showLinksMobile)}>Evolução da Covid-19</a>
                         <a 
                         href = {`#${prevention}`} 
                         onClick = {() => setShowLinksMobile(!showLinksMobile)}>Prevenção</a>

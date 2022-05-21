@@ -88,7 +88,7 @@ export const MenuContent = styled.div`
         }
     }
 
-    @media(max-width: 770px){
+    @media(max-width: 880px){
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -116,7 +116,7 @@ export const MenuContent = styled.div`
 
             :nth-child(3){
                 background-color: rgba(0, 0, 0, 0.5);
-                width: 100vw;
+                width: 99.9vw;
                 
                 &.show{
                     display: block;

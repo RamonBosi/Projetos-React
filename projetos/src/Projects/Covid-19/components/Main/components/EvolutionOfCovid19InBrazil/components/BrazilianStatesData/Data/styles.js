@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const Content = styled.div`
-    height: 600px;
     margin: 15px 0 0 0;
 
     > div{

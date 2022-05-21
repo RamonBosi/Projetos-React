@@ -2,18 +2,18 @@ import { useContext } from 'react'
 import { ContextLinks } from '../../../../Contexts/ContextLinks'
 import ContextAPIProvider from '../../../../Contexts/API'
 import { Content } from './styles'
-// import BrazilGraphic from './components/BrazilGraphic'
+import BrazilGraphic from './components/BrazilGraphic'
 import BrazilianStatesData from './components/BrazilianStatesData'
 
 export default function EvolutionOfCovid19InBrazil(){
 
-    const { graphics } = useContext(ContextLinks)
+    const { evolutionCovid19 } = useContext(ContextLinks)
 
     return(
-        <Content id = {graphics}>
+        <Content id = {evolutionCovid19}>
             <div>
                 <ContextAPIProvider>
-                    {/* <BrazilGraphic/> */}
+                    <BrazilGraphic/>
                     <BrazilianStatesData/>
                 </ContextAPIProvider>
             </div>

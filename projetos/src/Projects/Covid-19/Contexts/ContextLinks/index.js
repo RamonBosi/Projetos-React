@@ -8,7 +8,7 @@ export default function ContextLinksProvider({ children }){
         whatIsCovid19: 'whatIsCovid19',
         streaming: 'streaming',
         symptoms: 'symptoms',
-        graphics: 'graphics',
+        evolutionCovid19: 'evolutionCovid19',
         prevention: 'prevention'
     }
 

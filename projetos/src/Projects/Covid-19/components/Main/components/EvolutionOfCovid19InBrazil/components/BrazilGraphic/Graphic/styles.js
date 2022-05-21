@@ -5,6 +5,7 @@ export const Content = styled.div`
     padding: 20px;
     width: 100%;
     height: 95%;
+    margin: 20px 0 0 0;
 
     > div{
 

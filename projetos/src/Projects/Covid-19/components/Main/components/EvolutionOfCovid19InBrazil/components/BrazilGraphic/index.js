@@ -9,6 +9,7 @@ export default function BrazilGraphic(){
                 <p>
                     Gráfico geográfico do Brasil mostrando como está a evolução da covid-19
                 </p>
+                <p><strong>Obs: selecione um Estado para ver sua situação</strong></p>
                 <Graphic/>
             </section>
         </Content>

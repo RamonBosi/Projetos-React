@@ -11,7 +11,7 @@ export const Content = styled.section`
         height: 80%;
 
         > p{
-            margin: 20px 0;
+            margin: 5px 0;
         }
     }
 
@@ -21,7 +21,7 @@ export const Content = styled.section`
 
             > p{
                 width: 90%;
-                margin: 20px 15px;
+                margin: 5px 15px;
             }
         }
     }
