@@ -1,5 +1,5 @@
 import { Content } from './styles'
-import Graphic from './Graphic'
+import Data from './Data'
 
 export default function BrazilianStatesData(){
     return(
@@ -7,7 +7,7 @@ export default function BrazilianStatesData(){
             <header><h2>Gráfico por Estado brasileiros</h2></header>
             <section>
                 <p>Informações referentes a evolução da covid-19 em cada Estado brasileiro</p> 
-                <Graphic/>
+                <Data/>
             </section>
         </Content>
     )

@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react"
 import { ContextAPI } from '../../../../../../../Contexts/API'
-import { Content } from "./styles"
+import { Content, DataContent } from "./styles"
 
 export default function Data(){
 
@@ -28,23 +28,20 @@ export default function Data(){
                     {selectionOptions}
                 </select>
             </div>
-            <div>
+            <DataContent>
                 <h2>Estado selecionado</h2>
                 <div>
-                    <span>
-                        <p>Casos:</p>
-                        <p>100</p>
-                    </span>
-                    <span>
-                        <p>Suspeitos: </p>
-                        <p>200</p>
-                    </span>
-                    <span>
-                        <p>Mortes: </p>
-                        <p>300</p>
-                    </span>
+                    <div>
+                        <p>Casos: <span>100</span></p>
+                    </div>
+                    <div>
+                        <p>Suspeitos: <span>100</span></p>
+                    </div>
+                    <div>
+                        <p>Mortes: <span>100</span></p>
+                    </div>
                 </div>
-            </div>
+            </DataContent>
         </Content>
     )
 }
