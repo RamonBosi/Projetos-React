@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react"
 import { ContextAPI } from '../../../../../../../Contexts/API'
 import { Content } from "./styles"
 
-export default function Graphic(){
+export default function Data(){
 
     const { API } = useContext(ContextAPI)
 

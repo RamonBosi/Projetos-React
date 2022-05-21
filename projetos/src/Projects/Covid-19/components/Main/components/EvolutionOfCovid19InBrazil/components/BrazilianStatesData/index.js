@@ -1,7 +1,7 @@
 import { Content } from './styles'
 import Graphic from './Graphic'
 
-export default function BrasilianStatesChart(){
+export default function BrazilianStatesData(){
     return(
         <Content>
             <header><h2>Gráfico por Estado brasileiros</h2></header>

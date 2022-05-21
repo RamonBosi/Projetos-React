@@ -3,9 +3,9 @@ import { ContextLinks } from '../../../../Contexts/ContextLinks'
 import ContextAPIProvider from '../../../../Contexts/API'
 import { Content } from './styles'
 // import BrazilGraphic from './components/BrazilGraphic'
-import BrasilianStatesChart from './components/BrazilianStatesChart'
+import BrazilianStatesData from './components/BrazilianStatesData'
 
-export default function Graphics(){
+export default function EvolutionOfCovid19InBrazil(){
 
     const { graphics } = useContext(ContextLinks)
 
@@ -14,7 +14,7 @@ export default function Graphics(){
             <div>
                 <ContextAPIProvider>
                     {/* <BrazilGraphic/> */}
-                    <BrasilianStatesChart/>
+                    <BrazilianStatesData/>
                 </ContextAPIProvider>
             </div>
         </Content>

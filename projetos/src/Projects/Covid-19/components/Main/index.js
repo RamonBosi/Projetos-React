@@ -3,7 +3,7 @@ import { MainContext } from './styles'
 // import Streaming from './components/Streaming'
 // import Symptoms from './components/Symptoms'
 // import Prevention from './components/Prevention'
-import Graphics from './components/Graphics'
+import EvolutionOfCovid19InBrazil from './components/EvolutionOfCovid19InBrazil'
 
 export default function CreateMain(){
     return(
@@ -13,7 +13,7 @@ export default function CreateMain(){
                 {/* <WhatIsCovid19/>
                 <Streaming/>
                 <Symptoms/> */}
-                <Graphics/>
+                <EvolutionOfCovid19InBrazil/>
                 {/* <Prevention/> */}
            </MainContext>
        </main>
