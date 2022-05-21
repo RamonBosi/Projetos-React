@@ -7,8 +7,16 @@ export default function Data(){
     const { API } = useContext(ContextAPI)
 
     const [selectionOptions, setSelectionOptions] = useState(null)
+    const [{ state, cases, suspects, deaths }, setStateData] = useState({
+        state: null,
+        cases: null,
+        suspects: null,
+        deaths: null
+    })
 
     useEffect(()=>{
+
+        loadData()
 
         API.get()
         .then((states) =>{
@@ -20,25 +28,46 @@ export default function Data(){
         .catch(() => console.log('Algo deu errado'))
     },[])
     
+    const loadData = (selectedState = 'Acre') =>{
+        API.get()
+        .then((states) =>{
+            
+            const stateData = () =>{ 
+                if(selectedState === 'Acre'){
+                    return states.data.data.filter(
+                        (state) => state.state === 'Acre'
+                    )
+                }else{
+                    return states.data.data.filter(
+                        (state) => state.state === selectedState.target.value
+                    )
+                }
+            }
+            
+            setStateData(...stateData())
+        })
+        .catch(() => console.log('Algo deu errado'))
+    }
+
     return(
         <Content>
             <div>
                 <span className = 'material-icons'>expand_more</span>
-                <select>
+                <select onChange = {(selectedState) => loadData(selectedState)}>
                     {selectionOptions}
                 </select>
             </div>
             <DataContent>
-                <h2>Estado selecionado</h2>
+                <h2>{state}</h2>
                 <div>
                     <div>
-                        <p>Casos: <span>100</span></p>
+                        <p>Casos: <span>{cases}</span></p>
                     </div>
                     <div>
-                        <p>Suspeitos: <span>100</span></p>
+                        <p>Suspeitos: <span>{suspects}</span></p>
                     </div>
                     <div>
-                        <p>Mortes: <span>100</span></p>
+                        <p>Mortes: <span>{deaths}</span></p>
                     </div>
                 </div>
             </DataContent>

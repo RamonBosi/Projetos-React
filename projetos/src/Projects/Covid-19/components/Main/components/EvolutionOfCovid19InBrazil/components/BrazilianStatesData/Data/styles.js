@@ -99,4 +99,20 @@ export const DataContent = styled.div`
             }
         }
     }
+
+    @media(max-width: 770px){
+        height: auto;
+        padding: 30px 10px;
+
+        > div{
+            flex-direction: column;
+        }
+    }
+
+    @media(max-width: 350px){
+
+        > div{
+            font-size: 2.7rem;
+        }
+    }
 `
