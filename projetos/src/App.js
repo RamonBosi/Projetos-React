@@ -1,4 +1,4 @@
-import Application from "./Projects/Covid-19";
+import Application from "./Projects/ToDoList";
 
 export default function App() {
   
