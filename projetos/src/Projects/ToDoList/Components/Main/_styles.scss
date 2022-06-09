@@ -1,0 +1,27 @@
+.main-context{
+    margin: 20px 0 0 0;
+    padding: 20px;
+    @include add-flex-center();
+    
+    .main-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-grow: 1;
+        max-width: 1700px;
+
+        > div{
+
+            &:nth-child(1){
+
+                .button-add-list{
+                    @include add-button-style($default-white, $default-black);
+                }
+            }
+        }
+
+        .add-icon{
+            @include add-style-icon(30px, $main-color);
+        }
+    }
+}

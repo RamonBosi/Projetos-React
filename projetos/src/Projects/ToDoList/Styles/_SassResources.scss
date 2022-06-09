@@ -2,11 +2,12 @@ $background-color-for-development: darkslategray;
 
 $main-color: rgba(232, 128, 6, 1);
 
+$cancel-button: rgba(108, 108, 108, 1);
 $delete-button: rgba(255, 0, 0, 1);
 $add-update-button: rgba(39, 147, 1, 1);
 
-$font-color-black: rgba(0, 0, 0, 1);
-$font-color-white: rgba(255, 255, 255, 1);
+$default-black: rgba(0, 0, 0, 1);
+$default-white: rgba(255, 255, 255, 1);
 
 @mixin add-width-height($w, $h:auto ){
     width: $w;
@@ -19,11 +20,12 @@ $font-color-white: rgba(255, 255, 255, 1);
     align-items: center;
 }
 
-@mixin add-style-icon($grid-width){
+@mixin add-style-icon($grid-width, $color){
     display: grid;
     grid-template-columns: $grid-width;
     justify-items: center;
     align-items: center;
+    margin: 0 2px 0 0;
 
     > span{
         grid-area: 1 / 1 / 2 / 2;
@@ -35,6 +37,29 @@ $font-color-white: rgba(255, 255, 255, 1);
 
         &.material-icons{
             font-size: $grid-width - 4px;
+            color: $color;
+            font-weight: 500;
         }  
+    }
+}
+
+@mixin add-button-style($background-color, $color){
+    @include add-flex-center();
+    padding: 8px;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 2.5px 2.5px 0px 0px $default-black;
+    font-size: 1.7rem;
+    background-color: $background-color;
+    color: $color;
+    font-weight: 700;
+
+    &:hover{
+        background-color: darken($background-color, 15);
+    }
+
+    &:active{
+        box-shadow: none;
     }
 }

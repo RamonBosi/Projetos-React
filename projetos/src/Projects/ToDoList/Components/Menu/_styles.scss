@@ -12,6 +12,6 @@
     }
 
     &-icon{
-        @include add-style-icon(40px);
+        @include add-style-icon(40px, $default-black);
     }
 }

@@ -1,4 +1,7 @@
 @import './SassResources';
 @import './GlobalStyles';
 
-@import '../Menu/styles';
+@import '../Components/Menu/styles';
+
+@import '../Components/Main/styles';
+@import '../Components/Main/Assignment/styles';
