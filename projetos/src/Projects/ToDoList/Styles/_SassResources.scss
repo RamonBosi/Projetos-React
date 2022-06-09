@@ -1,1 +1,40 @@
 $background-color-for-development: darkslategray;
+
+$main-color: rgba(232, 128, 6, 1);
+
+$delete-button: rgba(255, 0, 0, 1);
+$add-update-button: rgba(39, 147, 1, 1);
+
+$font-color-black: rgba(0, 0, 0, 1);
+$font-color-white: rgba(255, 255, 255, 1);
+
+@mixin add-width-height($w, $h:auto ){
+    width: $w;
+    height: $h;
+}
+
+@mixin add-flex-center(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin add-style-icon($grid-width){
+    display: grid;
+    grid-template-columns: $grid-width;
+    justify-items: center;
+    align-items: center;
+
+    > span{
+        grid-area: 1 / 1 / 2 / 2;
+        
+        &:nth-child(1){
+            z-index: 10;
+            @include add-width-height($grid-width, $grid-width);
+        }
+
+        &.material-icons{
+            font-size: $grid-width - 4px;
+        }  
+    }
+}

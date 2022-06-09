@@ -1,0 +1,17 @@
+.menu{
+    background-color: $main-color;
+    padding: 20px;
+
+    &-container{
+        @include add-flex-center();
+
+        > h1{
+            font-family: 'Courgette',Arial, Helvetica, sans-serif;
+            margin: 0 5px;
+        }
+    }
+
+    &-icon{
+        @include add-style-icon(40px);
+    }
+}

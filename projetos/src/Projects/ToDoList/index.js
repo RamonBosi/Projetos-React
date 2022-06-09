@@ -1,9 +1,10 @@
 import './Styles/index.scss'
+import Menu from './Menu'
 
 export default function ToDoList(){
     return(
         <>
-            <h1>Testando</h1>
+            <Menu/>
         </>
     )
 }
