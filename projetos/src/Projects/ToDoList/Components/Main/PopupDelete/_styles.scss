@@ -1,0 +1,14 @@
+.popup-delete{
+    z-index: 1000;
+    background-color: rgba(0,0,0, .5);
+    @include add-width-height(100vw, 100vh);
+    @include add-flex-center();
+
+    &-container{
+        background-color:$main-color;
+        padding: 20px;
+        &-buttons{
+    
+        }
+    }
+}

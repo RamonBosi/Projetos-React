@@ -1,17 +1,11 @@
-import Icon from '../Icon'
-import Assignment from './Assignment'
+import Task from "./Task"
+import PopupDelete from './PopupDelete'
 
 export default function Main(){
     return(
         <main className = 'main-context'>
             <div className = 'main-container'>
-                <div>
-                    <button className = 'button-add-list'>
-                        <Icon componentIcon = 'add-icon' iconName = 'playlist_add'/>
-                        Cadastrar Tarefa
-                    </button>
-                </div>
-                <Assignment/>
+                <PopupDelete/>
             </div>
         </main>
     )

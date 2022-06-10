@@ -1,6 +1,6 @@
-export default function Icon({ componentIcon, iconName }){
+export default function Icon({ className, iconName }){
     return(
-        <div className = { componentIcon }>
+        <div className = { className }>
             <span></span>
             <span className = 'material-icons'>{ iconName }</span>
         </div>
