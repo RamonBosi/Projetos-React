@@ -1,14 +1,49 @@
 .popup-delete{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
     z-index: 1000;
     background-color: rgba(0,0,0, .5);
-    @include add-width-height(100vw, 100vh);
     @include add-flex-center();
 
     &-container{
-        background-color:$main-color;
-        padding: 20px;
-        &-buttons{
-    
+        display: flex;
+        flex-direction: column;
+        background-color: $main-color;
+        padding: 30px;
+        border-radius: 10px;
+        color: $default-white;
+        
+        p{
+            font-size: 1.8rem;
+        }
+
+        > div{
+            display: flex;
+            justify-content: space-evenly;
+            margin: 20px 0 0 0;
+
+            button{
+                @include add-button-style($cancel-button, $default-white);
+                padding: 15px 20px;
+
+                &:nth-child(1){
+                    @include add-button-style($delete-button, $default-white);
+                    padding: 15px 20px;
+                }
+            }
+        }
+    }
+
+    @include add-media-query(420px){
+
+        &-container{
+            padding: 15px 10px;
+        }
+
+        p{
+            font-size: 1.6rem;
         }
     }
 }

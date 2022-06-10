@@ -63,3 +63,9 @@ $default-white: rgba(255, 255, 255, 1);
         box-shadow: none;
     }
 }
+
+@mixin add-media-query($width){
+    @media(max-width: $width){
+        @content
+    }
+}
