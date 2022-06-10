@@ -1,4 +1,9 @@
+import { useNavigate } from "react-router-dom"
+
 export default function NewTask(){
+
+    const goTo = useNavigate()
+
     return(
         <div className = 'new-task'>
             <div className = 'new-task-container'>
@@ -8,7 +13,7 @@ export default function NewTask(){
                 </div>
                 <div className = 'new-task-buttons'>
                     <button>Editar</button>
-                    <button>Cancelar</button>
+                    <button onClick={() => goTo('/Projetos-React')}>Cancelar</button>
                 </div>
             </div>
         </div>

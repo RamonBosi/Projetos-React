@@ -1,12 +1,16 @@
+import { useNavigate } from 'react-router-dom'
 import Icon from '../../Icon'
 import PopupDelete from '../PopupDelete'
 
 export default function Task(){
+
+    const goTo = useNavigate()
+
     return(
         <div className = 'task'>
             <div className = 'task-container'>
                 <div className = 'task-button'>
-                    <button>
+                    <button onClick={() => goTo('/Projetos-React/newTask')}>
                         <Icon 
                             className = 'add-task-icon' 
                             iconName = 'playlist_add'
