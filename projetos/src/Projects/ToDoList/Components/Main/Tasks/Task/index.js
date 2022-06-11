@@ -2,12 +2,12 @@ import { useContext } from 'react'
 import { TaskContext } from '../../../../Context/TaskContext'
 import Icon from '../../../Icon'
 
-export default function Task(){
+export default function Task({ id, title, content }){
 
     const { showHidePopupDelete } = useContext(TaskContext)
 
     return(
-        <div className = 'task-information'>
+        <div id = {id} className = 'task-information'>
             <div>
                 <button>
                     <Icon className = 'update-task-icon' iconName = 'update'/>
@@ -19,8 +19,8 @@ export default function Task(){
                 </button>
             </div>
             <div>
-                <div className = 'task-title'>Titulo</div>
-                <div className = 'task-context'>Conteudo</div>
+                <div className = 'task-title'>{title}</div>
+                <div className = 'task-context'>{content}</div>
             </div>
         </div>
     )

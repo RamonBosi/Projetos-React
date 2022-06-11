@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { TaskContext } from '../../../Context/TaskContext'
 import { useNavigate } from 'react-router-dom'
 import Icon from '../../Icon'
@@ -7,9 +7,23 @@ import Task from './Task'
 
 export default function Tasks(){
 
-    const { showPopupDelete } = useContext(TaskContext)
+    const { showPopupDelete, getLocalStorage } = useContext(TaskContext)
 
     const goToPage = useNavigate()
+
+    const [loadTasks, setLoadTasks] = useState(<></>)
+
+    useEffect(() =>{
+        const allTasks = JSON.parse(getLocalStorage('tasks'))
+        
+        const taskComponents = allTasks.map((task) =>{
+            const { taskID, title, content } = task
+            return <Task id = {taskID} title = {title} content = {content}/>
+        })
+
+        setLoadTasks(taskComponents)
+
+    },[])
 
     return(
         <>
@@ -25,7 +39,7 @@ export default function Tasks(){
                             Cadastrar Tarefa
                         </button>
                     </div>
-                    <Task/>
+                    {loadTasks}
                 </div>
             </div>
         </>
