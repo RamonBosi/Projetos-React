@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import { TaskContext } from '../../../Context/TaskContext'
 
 export default function PopupDelete(){
 
@@ -8,6 +9,8 @@ export default function PopupDelete(){
             height: document.defaultView.innerHeight
         }
     })
+    
+    const { showHidePopupDelete } = useContext(TaskContext)
 
     return(
         <div style={widthHeight} className = 'popup-delete'>
@@ -15,7 +18,7 @@ export default function PopupDelete(){
                 <p>Deseja mesmo deletar a tarefa: <strong>TAREFA</strong> ?</p>
                 <div>
                     <button>Deletar</button>
-                    <button>Cancelar</button>
+                    <button onClick={() => showHidePopupDelete()}>Cancelar</button>
                 </div>
             </div>
         </div>
