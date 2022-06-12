@@ -5,11 +5,32 @@ export const TaskContext = createContext()
 export default function TaskContextProvider({ children }){
     
     const [showPopupDelete, setShowPopupDelete] = useState(false)
-    const [taskToBeDeleted, setTaskToBeDeleted] = useState(null)
+    const [localizedTask, setLocalizedTask] = useState(null)
 
-    const showHidePopupDelete = (task) =>{
+    const showHidePopupDelete = (taskID) =>{
+        findTask(taskID)
         setShowPopupDelete(!showPopupDelete)
         document.querySelector('body').classList.toggle('disable-overflow')
+    }
+
+    const findTask = (task) =>{
+
+        const allTasks = JSON.parse(getLocalStorage('tasks'))
+
+        let indexTask = null
+        const selectedTask = allTasks.find((t, index) => {
+
+            const { taskID } = t
+            if(taskID === task){
+                indexTask = index
+                return t
+            }
+        })
+
+        setLocalizedTask({
+            indexTask,
+            ...selectedTask
+        })
     }
 
     const setLocalStorage = (key, value) =>{
@@ -24,7 +45,9 @@ export default function TaskContextProvider({ children }){
         showPopupDelete,
         showHidePopupDelete,
         setLocalStorage,
-        getLocalStorage
+        getLocalStorage,
+        findTask,
+        localizedTask
     }
 
     return(

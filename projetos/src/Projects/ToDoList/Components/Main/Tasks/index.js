@@ -14,14 +14,17 @@ export default function Tasks(){
     const [loadTasks, setLoadTasks] = useState(<></>)
 
     useEffect(() =>{
-        const allTasks = JSON.parse(getLocalStorage('tasks'))
-        
-        const taskComponents = allTasks.map((task) =>{
-            const { taskID, title, content } = task
-            return <Task id = {taskID} title = {title} content = {content}/>
-        })
-
-        setLoadTasks(taskComponents)
+        if(getLocalStorage('tasks')){
+            
+            const allTasks = JSON.parse(getLocalStorage('tasks'))
+            
+            const taskComponents = allTasks.map((task) =>{
+                const { taskID, title, content } = task
+                return <Task id = {taskID} title = {title} content = {content}/>
+            })
+    
+            setLoadTasks(taskComponents)
+        }
 
     },[])
 

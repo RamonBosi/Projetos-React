@@ -13,7 +13,7 @@ export default function Task({ id, title, content }){
                     <Icon className = 'update-task-icon' iconName = 'update'/>
                     Editar
                 </button>
-                <button onClick={() => showHidePopupDelete()}>
+                <button onClick={() => showHidePopupDelete(id)}>
                     <Icon className = 'delete-task-icon' iconName = 'delete'/>
                     Deletar
                 </button>
