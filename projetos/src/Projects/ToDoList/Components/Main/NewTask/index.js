@@ -1,17 +1,22 @@
-import { useContext, useRef } from "react"
-import { useNavigate } from "react-router-dom"
+import { useContext, useEffect, useRef } from "react"
+import { useNavigate, useParams, useHref } from "react-router-dom"
 import { TaskContext } from "../../../Context/TaskContext"
 
 export default function NewTask(){
 
-    const { setLocalStorage, getLocalStorage } = useContext(TaskContext)
-
-    const goToPage = useNavigate()
+    const { 
+        setLocalStorage, 
+        getLocalStorage, 
+        findTask, 
+        localizedTask 
+    } = useContext(TaskContext)
 
     const { inputValue, textAreaValue } = {
         inputValue: useRef(),
         textAreaValue: useRef()
     }
+
+    const goToPage = useNavigate()
 
     const addTask = () =>{
 
@@ -58,15 +63,33 @@ export default function NewTask(){
         goToPage('/Projetos-React')
     }
 
+    const { action, taskID } = useParams()
+
+    useEffect(() =>{
+        
+        console.log(localizedTask)
+    },[taskID])
+
     return(
         <div className = 'new-task'>
             <div className = 'new-task-container'>
                 <div className = 'create-new-task'>
-                    <input defaultValue = 'titulo teste'ref = {inputValue} type = 'text' placeholder = 'Título'/>
-                    <textarea defaultValue = 'valor teste' ref = {textAreaValue}cols = '100' rows = '15'></textarea>
+                    <input 
+                        // defaultValue = {title === null? '' : title}
+                        ref = {inputValue} 
+                        type = 'text' 
+                        placeholder = 'Título'/>
+                    <textarea 
+                        // defaultValue = {action === 'add'? '' : content} 
+                        ref = {textAreaValue}
+                        cols = '100' 
+                        rows = '15'>
+                    </textarea>
                 </div>
                 <div className = 'new-task-buttons'>
-                    <button onClick={() => addTask()}>Cadastrar</button>
+                    <button onClick={() => addTask()}>
+                        {action === 'add'? 'Cadastrar' : 'Editar'}
+                    </button>
                     <button onClick={() => goToPage('/Projetos-React')}>Cancelar</button>
                 </div>
             </div>

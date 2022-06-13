@@ -11,7 +11,8 @@ export default function Main(){
                     <BrowserRouter>
                         <Routes>
                             <Route path = '/Projetos-React' element = {<Tasks/>}/>
-                            <Route path = '/Projetos-React/newTask' element = {<NewTask/>}/>
+                            <Route path = '/Projetos-React/newTask/:action' element = {<NewTask/>}/>
+                            <Route path = '/Projetos-React/newTask/:action/:taskID' element = {<NewTask/>}/>
                         </Routes>
                     </BrowserRouter>
                 </TaskContextProvider>

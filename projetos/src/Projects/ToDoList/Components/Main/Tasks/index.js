@@ -7,11 +7,11 @@ import Task from './Task'
 
 export default function Tasks(){
 
+    const [loadTasks, setLoadTasks] = useState(<></>)
+
     const { showPopupDelete, getLocalStorage } = useContext(TaskContext)
 
     const goToPage = useNavigate()
-
-    const [loadTasks, setLoadTasks] = useState(<></>)
 
     useEffect(() =>{
         if(getLocalStorage('tasks')){
@@ -34,7 +34,7 @@ export default function Tasks(){
             <div className = 'task'>
                 <div className = 'task-container'>
                     <div className = 'task-button'>
-                        <button onClick={() => goToPage('/Projetos-React/newTask')}>
+                        <button onClick={() => goToPage('/Projetos-React/newTask/add')}>
                             <Icon 
                                 className = 'add-task-icon' 
                                 iconName = 'playlist_add'
