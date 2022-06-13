@@ -1,7 +1,21 @@
-import Application from "./Projects/ToDoList";
+import { useContext } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ContextProjectRoutes } from "./Routes/RouteContext";
+import VirtualStore from "./Projects/VirtualStore";
+import Covid19 from "./Projects/Covid-19";
+import ToDoList from "./Projects/ToDoList";
 
 export default function App() {
   
-  return <Application/>
-  
+  const { rootRoute } = useContext(ContextProjectRoutes)
+
+  return (
+      <BrowserRouter>
+        <Routes>
+          <Route path = {`${rootRoute}/VirtualStore`} element = {<VirtualStore/>}/>
+          <Route path = {`${rootRoute}/Covid19`} element = {<Covid19/>}/>
+          <Route path = {`${rootRoute}/ToDoList/*`} element = {<ToDoList/>}/>
+        </Routes>
+      </BrowserRouter>
+  )
 }

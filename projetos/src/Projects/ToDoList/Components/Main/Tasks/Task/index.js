@@ -11,7 +11,7 @@ export default function Task({ id, title, content }){
 
     const updateTask = (taskID) =>{
         findTask(taskID)
-        goToPage(`/Projetos-React/newTask/update/${taskID}`)
+        goToPage(`newTask/update/${taskID}`)
     }
 
     return(

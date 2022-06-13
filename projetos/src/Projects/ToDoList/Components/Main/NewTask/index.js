@@ -63,7 +63,7 @@ export default function NewTask(){
         }
 
         setLocalStorage(taskKey, JSON.stringify(createTask()))
-        goToPage('/Projetos-React')
+        goToPage('/')
     }
 
     const updateTask = () =>{
@@ -80,7 +80,7 @@ export default function NewTask(){
         }
 
         setLocalStorage('tasks', JSON.stringify(allTasks))
-        goToPage('/Projetos-React')
+        goToPage('/')
     }
 
     return(
@@ -104,7 +104,7 @@ export default function NewTask(){
                     onClick={() => action === 'add' ? addTask() : updateTask()}>
                         {action === 'add' ? 'Cadastrar' : 'Editar'}
                     </button>
-                    <button onClick={() => goToPage('/Projetos-React')}>Cancelar</button>
+                    <button onClick={() => goToPage('/')}>Cancelar</button>
                 </div>
             </div>
         </div>
