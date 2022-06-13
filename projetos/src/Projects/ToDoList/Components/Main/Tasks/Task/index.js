@@ -5,13 +5,19 @@ import Icon from '../../../Icon'
 
 export default function Task({ id, title, content }){
 
-    const { showHidePopupDelete } = useContext(TaskContext)
+    const { showHidePopupDelete, findTask } = useContext(TaskContext)
+
     const goToPage = useNavigate()
+
+    const updateTask = (taskID) =>{
+        findTask(taskID)
+        goToPage(`/Projetos-React/newTask/update/${taskID}`)
+    }
 
     return(
         <div id = {id} className = 'task-information'>
             <div>
-                <button onClick={() => goToPage(`/Projetos-React/newTask/update/${id}`)}>
+                <button onClick={() => updateTask(id)}>
                     <Icon className = 'update-task-icon' iconName = 'update'/>
                     Editar
                 </button>
@@ -21,7 +27,7 @@ export default function Task({ id, title, content }){
                 </button>
             </div>
             <div>
-                <div className = 'task-title'>{title}</div>
+                <div className = 'task-title'><strong>{title}</strong></div>
                 <div className = 'task-context'>{content}</div>
             </div>
         </div>

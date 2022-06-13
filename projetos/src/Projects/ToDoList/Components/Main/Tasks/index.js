@@ -14,6 +14,7 @@ export default function Tasks(){
     const goToPage = useNavigate()
 
     useEffect(() =>{
+        
         if(getLocalStorage('tasks')){
             
             const allTasks = JSON.parse(getLocalStorage('tasks'))
@@ -25,7 +26,6 @@ export default function Tasks(){
     
             setLoadTasks(taskComponents)
         }
-
     },[])
 
     return(

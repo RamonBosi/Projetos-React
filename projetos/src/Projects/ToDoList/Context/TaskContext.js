@@ -17,31 +17,22 @@ export default function TaskContextProvider({ children }){
 
     const findTask = (task) =>{
 
-        if(getLocalStorage('tasks')){
-            const allTasks = JSON.parse(getLocalStorage('tasks'))
+        const allTasks = JSON.parse(getLocalStorage('tasks'))
 
-            let indexTask = null
-            const selectedTask = allTasks.find((t, index) => {
+        let indexTask = null
+        const selectedTask = allTasks.find((t, index) => {
 
-                const { taskID } = t
-                if(taskID === task){
-                    indexTask = index
-                    return t
-                }
-            })
+            const { taskID } = t
+            if(taskID === task){
+                indexTask = index
+                return t
+            }
+        })
 
-            setLocalizedTask((oldState) => {
-                return {
-                    ...oldState,    
-                    indexTask,
-                    ...selectedTask
-                }
-            })
-        }else{
-            setLocalizedTask(null)
-        }
-        // console.log('Valor do State no contexto')
-        // console.log(localizedTask)
+        setLocalizedTask({    
+            indexTask,
+            ...selectedTask
+        })
     }
 
     const showHidePopupDelete = (taskID = null) =>{
