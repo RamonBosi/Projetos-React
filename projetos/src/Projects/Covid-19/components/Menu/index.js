@@ -1,6 +1,7 @@
 import { useState, useContext } from 'react'
 import { Menu, MenuContent } from './styles'
 import { ContextLinks } from '../../Contexts/ContextLinks'
+import BackHomePage from '../../../../Routes/Home/BackHomePage'
 
 export default function CreateMenu(){
     
@@ -16,6 +17,7 @@ export default function CreateMenu(){
 
     return (
         <Menu>
+            <BackHomePage/>
             <MenuContent>
                 <div>
                     <span>

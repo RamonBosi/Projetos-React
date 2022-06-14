@@ -1,8 +1,18 @@
-import { Menu, MenuContent, Mark, Search, Address, AccountInformation } from './styles'
+import { 
+    Menu, 
+    MenuContent, 
+    Mark, 
+    Search, 
+    Address, 
+    AccountInformation 
+} from './styles'
+
+import BackHomePage from '../../../../Routes/Home/BackHomePage'
 
 export default function MainMenu(){
     return(
         <Menu>
+            <BackHomePage/>
             <MenuContent>
                 <span className = 'material-icons'>menu</span>
                 <Mark>

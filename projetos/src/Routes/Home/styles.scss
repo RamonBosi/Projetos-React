@@ -2,14 +2,14 @@ $main-color: rgb(4, 27, 129);
 $default-white: rgba(255, 255,255,1);
 $default-black: rgba(0,0,0,1);
 
-@mixin set-flex-center() {
+@mixin add-flex-center() {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .home{
-    @include set-flex-center();
+    @include add-flex-center();
     background-color: $main-color;
     color: $default-white;
 
