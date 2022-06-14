@@ -10,13 +10,13 @@ export default function Main(){
                 <TaskContextProvider>
                         <Routes>
                             <Route 
-                                path = '/' 
+                                path = '/'
                                 element = {<Tasks/>}/>
                             <Route 
-                                path = '/newTask/:action' 
+                                path = 'newTask/:action' 
                                 element = {<NewTask/>}/>
                             <Route 
-                                path = '/newTask/:action/:taskID'
+                                path = 'newTask/:action/:taskID'
                                 element = {<NewTask/>}/>
                         </Routes>
                 </TaskContextProvider>

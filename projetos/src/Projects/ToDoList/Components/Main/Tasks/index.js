@@ -34,7 +34,7 @@ export default function Tasks(){
             <div className = 'task'>
                 <div className = 'task-container'>
                     <div className = 'task-button'>
-                        <button onClick={() => goToPage('/')}>
+                        <button onClick={() => goToPage('newTask/add')}>
                             <Icon 
                                 className = 'add-task-icon' 
                                 iconName = 'playlist_add'

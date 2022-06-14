@@ -17,8 +17,8 @@ export default function NewTask(){
 
     const { action } = useParams()
 
-    const { title, content } = localizedTask
-
+    const task = localizedTask
+    console.log(task)
     const goToPage = useNavigate()
 
     const addTask = () =>{
@@ -63,7 +63,7 @@ export default function NewTask(){
         }
 
         setLocalStorage(taskKey, JSON.stringify(createTask()))
-        goToPage('/')
+        goToPage('/Projetos-React/ToDoList')
     }
 
     const updateTask = () =>{
@@ -88,12 +88,12 @@ export default function NewTask(){
             <div className = 'new-task-container'>
                 <div className = 'create-new-task'>
                     <input 
-                        defaultValue = {action === 'add' ? '' : title}
+                        defaultValue = ''
                         ref = {inputValue} 
                         type = 'text' 
                         placeholder = 'Título'/>
                     <textarea 
-                        defaultValue = {action === 'add' ? '' : content} 
+                        defaultValue = '' 
                         ref = {textAreaValue}
                         cols = '100' 
                         rows = '15'>
@@ -104,7 +104,7 @@ export default function NewTask(){
                     onClick={() => action === 'add' ? addTask() : updateTask()}>
                         {action === 'add' ? 'Cadastrar' : 'Editar'}
                     </button>
-                    <button onClick={() => goToPage('/')}>Cancelar</button>
+                    <button onClick={() => goToPage('/Projetos-React/ToDoList')}>Cancelar</button>
                 </div>
             </div>
         </div>
