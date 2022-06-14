@@ -1,8 +1,11 @@
 import { useContext, useRef } from "react"
 import { useNavigate, useParams } from "react-router-dom"
+import { ContextProjectRoutes } from "../../../../../Routes/RouteContext"
 import { TaskContext } from "../../../Context/TaskContext"
 
 export default function NewTask(){
+
+    const { rootRoute } = useContext(ContextProjectRoutes)
 
     const { 
         setLocalStorage, 
@@ -17,9 +20,24 @@ export default function NewTask(){
 
     const { action } = useParams()
 
-    const task = localizedTask
-    console.log(task)
+    const analyzeSelectedTask = (task, value) =>{
+
+        if(action === 'add'){
+            return ''
+        }else{
+            const { title, content } = task
+
+            if(value === 'title'){
+                return title
+            }else{
+                return content
+            }
+        }
+    }
+    
     const goToPage = useNavigate()
+
+    const homePage = `${rootRoute}/ToDoList`
 
     const addTask = () =>{
 
@@ -63,7 +81,7 @@ export default function NewTask(){
         }
 
         setLocalStorage(taskKey, JSON.stringify(createTask()))
-        goToPage('/Projetos-React/ToDoList')
+        goToPage(homePage)
     }
 
     const updateTask = () =>{
@@ -80,7 +98,7 @@ export default function NewTask(){
         }
 
         setLocalStorage('tasks', JSON.stringify(allTasks))
-        goToPage('/')
+        goToPage(homePage)
     }
 
     return(
@@ -88,12 +106,12 @@ export default function NewTask(){
             <div className = 'new-task-container'>
                 <div className = 'create-new-task'>
                     <input 
-                        defaultValue = ''
+                        defaultValue = {analyzeSelectedTask(localizedTask, 'title')}
                         ref = {inputValue} 
                         type = 'text' 
                         placeholder = 'Título'/>
                     <textarea 
-                        defaultValue = '' 
+                        defaultValue = { analyzeSelectedTask(localizedTask, 'content')} 
                         ref = {textAreaValue}
                         cols = '100' 
                         rows = '15'>
@@ -104,7 +122,7 @@ export default function NewTask(){
                     onClick={() => action === 'add' ? addTask() : updateTask()}>
                         {action === 'add' ? 'Cadastrar' : 'Editar'}
                     </button>
-                    <button onClick={() => goToPage('/Projetos-React/ToDoList')}>Cancelar</button>
+                    <button onClick={() => goToPage(homePage)}>Cancelar</button>
                 </div>
             </div>
         </div>

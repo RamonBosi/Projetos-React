@@ -1,0 +1,42 @@
+$main-color: rgb(4, 27, 129);
+$default-white: rgba(255, 255,255,1);
+$default-black: rgba(0,0,0,1);
+
+@mixin set-flex-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home{
+    @include set-flex-center();
+    background-color: $main-color;
+    color: $default-white;
+
+    &-container{
+        background-color: rgba($default-black,0.5);
+        border-radius: 10px;
+        border: solid 2px $default-white;
+        padding: 35px;
+        
+        nav{
+            display: flex;
+            flex-direction: column;
+            margin: 15px 0 0 0;
+
+            a{
+                font-size: 18px;
+                color: $default-white;
+                margin: 10px 0;
+                padding: 10px;
+                border-radius: 10px;
+
+                &:hover{
+                    background-color: $default-white;
+                    color: $default-black;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
