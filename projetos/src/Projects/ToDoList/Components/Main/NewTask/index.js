@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react"
+import { useContext, useEffect, useRef } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { ContextProjectRoutes } from "../../../../../Routes/RouteContext"
 import { TaskContext } from "../../../Context/TaskContext"
@@ -20,24 +20,19 @@ export default function NewTask(){
 
     const { action } = useParams()
 
-    const analyzeSelectedTask = (task, value) =>{
-
-        if(action === 'add'){
-            return ''
-        }else{
-            const { title, content } = task
-
-            if(value === 'title'){
-                return title
-            }else{
-                return content
-            }
-        }
-    }
-    
     const goToPage = useNavigate()
 
     const homePage = `${rootRoute}/ToDoList`
+
+    useEffect(() =>{
+
+        if(action === 'update'){
+
+            if(!localizedTask){ 
+                goToPage(homePage)
+            }
+        }
+    },[])
 
     const addTask = () =>{
 
@@ -101,17 +96,36 @@ export default function NewTask(){
         goToPage(homePage)
     }
 
+    const addDefaultValue = (valueType)=>{
+        
+        if(action === 'add'){
+            return ''
+        }else{
+            if(localizedTask){
+                const { title, content } = localizedTask
+
+                if(valueType === 'title'){
+                    return title
+                }else{
+                    return content
+                }
+            }else{
+                return ''
+            }
+        }
+    }
+
     return(
         <div className = 'new-task'>
             <div className = 'new-task-container'>
                 <div className = 'create-new-task'>
                     <input 
-                        defaultValue = {analyzeSelectedTask(localizedTask, 'title')}
+                        defaultValue = {addDefaultValue('title')}
                         ref = {inputValue} 
                         type = 'text' 
                         placeholder = 'Título'/>
                     <textarea 
-                        defaultValue = { analyzeSelectedTask(localizedTask, 'content')} 
+                        defaultValue = {addDefaultValue('content')}
                         ref = {textAreaValue}
                         cols = '100' 
                         rows = '15'>
