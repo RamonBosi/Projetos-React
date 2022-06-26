@@ -1,12 +1,12 @@
-import './Styles/index.scss'
-import Menu from './Components/Menu'
-import Main from './Components/Main'
+import { Routes, Route } from 'react-router-dom'
+import Home from './Components'
+import './Styles/index.css'
 
-export default function ToDoList(){
-    return(
-        <>
-            <Menu/>
-            <Main/>
-        </>
+export default function ToDoList() {
+    return (
+        <Routes>
+            <Route path = '/*' element = {<Home/>}/>
+            <Route path = '*' element = {<Home/>}/>
+        </Routes>
     )
 }

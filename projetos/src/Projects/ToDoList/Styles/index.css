@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  outline: none;
+  border: none;
+}
+
+.disable-overflow {
+  overflow: hidden;
+}
+
+.menu {
+  background-color: rgb(232, 128, 6);
+  padding: 10px;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-container>h1 {
+  font-family: "Courgette", Arial, Helvetica, sans-serif;
+  margin: 0 5px;
+}
+
+.menu-icon {
+  display: grid;
+  grid-template-columns: 40px;
+  justify-items: center;
+  align-items: center;
+  margin: 0 2px 0 0;
+}
+
+.menu-icon>span {
+  grid-area: 1/1/2/2;
+}
+
+.menu-icon>span:nth-child(1) {
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+}
+
+.menu-icon>span.material-icons {
+  font-size: 36px;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+}
+
+.main-context {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-context .main-container {
+  flex-grow: 1;
+  max-width: 1700px;
+}
+
+.task {
+  padding: 20px;
+}
+
+.task-container .add-task-icon,
+.task-container .update-task-icon,
+.task-container .delete-task-icon {
+  display: grid;
+  grid-template-columns: 30px;
+  justify-items: center;
+  align-items: center;
+  margin: 0 2px 0 0;
+}
+
+.task-container .add-task-icon>span,
+.task-container .update-task-icon>span,
+.task-container .delete-task-icon>span {
+  grid-area: 1/1/2/2;
+}
+
+.task-container .add-task-icon>span:nth-child(1),
+.task-container .update-task-icon>span:nth-child(1),
+.task-container .delete-task-icon>span:nth-child(1) {
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+}
+
+.task-container .add-task-icon>span.material-icons,
+.task-container .update-task-icon>span.material-icons,
+.task-container .delete-task-icon>span.material-icons {
+  font-size: 26px;
+  color: rgb(232, 128, 6);
+  font-weight: 500;
+}
+
+.task-container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 2.5px 2.5px 0px 0px rgb(0, 0, 0);
+  font-size: 1.7rem;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+}
+
+.task-container button:hover {
+  background-color: #d9d9d9;
+}
+
+.task-container button:active {
+  box-shadow: none;
+}
+
+.task-container .task-button {
+  padding: 0 0 0 20px;
+}
+
+.task-container .task-information {
+  background-color: rgb(232, 128, 6);
+  margin: 60px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.task-container .task-information>div:nth-child(1) {
+  display: flex;
+}
+
+.task-container .task-information>div:nth-child(1) button {
+  margin: 0 10px;
+}
+
+.task-container .task-information>div:nth-child(2) {
+  margin: 20px 0 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-container .task-information>div:nth-child(2) div {
+  background-color: rgb(255, 255, 255);
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.task-container .task-information>div:nth-child(2) div.task-title {
+  font-size: 1.9rem;
+}
+
+.popup-delete {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-delete-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(232, 128, 6);
+  padding: 30px;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+}
+
+.popup-delete-container p {
+  font-size: 1.8rem;
+}
+
+.popup-delete-container>div {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 0 0 0;
+}
+
+.popup-delete-container>div button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 2.5px 2.5px 0px 0px rgb(0, 0, 0);
+  font-size: 1.7rem;
+  background-color: rgb(108, 108, 108);
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  padding: 15px 20px;
+}
+
+.popup-delete-container>div button:hover {
+  background-color: #464646;
+}
+
+.popup-delete-container>div button:active {
+  box-shadow: none;
+}
+
+.popup-delete-container>div button:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 2.5px 2.5px 0px 0px rgb(0, 0, 0);
+  font-size: 1.7rem;
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  padding: 15px 20px;
+}
+
+.popup-delete-container>div button:nth-child(1):hover {
+  background-color: #b30000;
+}
+
+.popup-delete-container>div button:nth-child(1):active {
+  box-shadow: none;
+}
+
+@media (max-width: 420px) {
+  .popup-delete-container {
+    padding: 15px 10px;
+  }
+
+  .popup-delete p {
+    font-size: 1.6rem;
+  }
+}
+
+.new-task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 8px 8px;
+}
+
+.new-task-container {
+  background-color: rgb(232, 128, 6);
+  padding: 20px;
+  margin: 25px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.new-task-container .create-new-task {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-task-container .create-new-task input,
+.new-task-container .create-new-task textarea {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.8rem;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.new-task-container .create-new-task input {
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.new-task-container .new-task-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0 0 0;
+}
+
+.new-task-container .new-task-buttons button {
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 2.5px 2.5px 0px 0px rgb(0, 0, 0);
+  font-size: 1.7rem;
+  background-color: rgb(108, 108, 108);
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  padding: 15px 10px;
+}
+
+.new-task-container .new-task-buttons button:hover {
+  background-color: #464646;
+}
+
+.new-task-container .new-task-buttons button:active {
+  box-shadow: none;
+}
+
+.new-task-container .new-task-buttons button:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 2.5px 2.5px 0px 0px rgb(0, 0, 0);
+  font-size: 1.7rem;
+  background-color: rgb(39, 147, 1);
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  padding: 15px 25px;
+}
+
+.new-task-container .new-task-buttons button:nth-child(1):hover {
+  background-color: #134700;
+}
+
+.new-task-container .new-task-buttons button:nth-child(1):active {
+  box-shadow: none;
+}
+
+/*# sourceMappingURL=index.css.map */
