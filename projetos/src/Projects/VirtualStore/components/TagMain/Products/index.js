@@ -1,11 +1,12 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Products } from './styles'
 import Product from './Product'
 
 export default function CreateProducts(){
 
-    const [loadProducts] = useState(() =>{
+    const [loadProducts, setLoadProducts] = useState(<></>)
 
+    useEffect(()=>{
         const standardProductKey = 'standardProducts'
         
         if(!localStorage.getItem(standardProductKey)){
@@ -48,8 +49,8 @@ export default function CreateProducts(){
 
         }
 
-        return vetorProducts
-    })
+        setLoadProducts(vetorProducts)
+    },[])
 
     return(
         <Products>

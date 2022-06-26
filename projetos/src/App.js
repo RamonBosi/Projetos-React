@@ -14,7 +14,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path = {rootRoute} element = {<Home/>}/>
-          <Route path = {`${rootRoute}/VirtualStore`} element = {<VirtualStore/>}/>
+          <Route path = {`${rootRoute}/VirtualStore/*`} element = {<VirtualStore/>}/>
           <Route path = {`${rootRoute}/Covid19`} element = {<Covid19/>}/>
           <Route path = {`${rootRoute}/ToDoList/*`} element = {<ToDoList/>}/>
         </Routes>
